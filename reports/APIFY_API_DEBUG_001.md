@@ -180,14 +180,14 @@ Dataset Items: 0
 
 ```
 scripts/
-  apify_api_debug_001.py              # Sync test
-  apify_api_debug_002_async.py        # Async test
+  [REDACTED_APIFY_TOKEN].py              # Sync test
+  [REDACTED_APIFY_TOKEN].py        # Async test
   apify_check_logs.py                 # Log retrieval
   mercari_apify_scraper.py            # Full integration (blocked by actor issue)
 
 reports/
-  APIFY_API_DEBUG_001.md              # This report
-  APIFY_API_DEBUG_002_ASYNC.md        # Async test log
+  [REDACTED_APIFY_TOKEN].md              # This report
+  [REDACTED_APIFY_TOKEN].md        # Async test log
   actor_run_logs.txt                  # Actor execution logs
   APIFY_MERCARI_TEST_RESULTS.md       # Initial test results
 ```

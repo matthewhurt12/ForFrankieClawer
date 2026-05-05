@@ -1,3 +1,22 @@
+# Quick Start - Archived Manual Flow
+
+This file is older. For current navigation, use:
+
+- `START_HERE.md`
+- `COMMANDS.md`
+- `README.md`
+- `reports/OPENCLAW_ARBITRAGE_RUNBOOK.md`
+
+For the current arbitrage pipeline, run:
+
+```powershell
+python scripts\run_arbitrage_pipeline.py
+```
+
+The older manual notes remain below for reference.
+
+---
+
 # Vintage Audio Flipping System - Quick Start
 
 **Status:** ✓ READY FOR DAILY USE  

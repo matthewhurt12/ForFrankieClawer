@@ -149,14 +149,14 @@ This is not an API issue - our API calls are correct. The actor itself cannot fe
 
 ```
 scripts/
-  apify_api_debug_001.py          # Initial sync test
-  apify_api_debug_002_async.py    # Async test
+  [REDACTED_APIFY_TOKEN].py          # Initial sync test
+  [REDACTED_APIFY_TOKEN].py    # Async test
   apify_check_logs.py             # Log retrieval
 
 reports/
-  APIFY_API_DEBUG_001.md          # Initial debug report
-  APIFY_API_DEBUG_002_ASYNC.md    # Async test log
-  APIFY_API_DEBUG_FINAL.md        # This report
+  [REDACTED_APIFY_TOKEN].md          # Initial debug report
+  [REDACTED_APIFY_TOKEN].md    # Async test log
+  [REDACTED_APIFY_TOKEN].md        # This report
   actor_run_logs.txt              # Actor execution logs
 ```
 

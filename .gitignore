@@ -19,10 +19,18 @@ build/
 
 # Raw data
 data/raw/
+data/browser_test_*/
 data/external_leads/*.json
 data/external_leads/*_raw_*.json
+data/ebay_active_search/*.json
 data/ebay_active_search/*_raw_*.json
+data/local_leads_*.json
+data/sold_comps/*.json
+data/sold_comps/*_clean.csv
 data/test_outputs/
+data/visual_ocr_*/
+screenshots/browser_test_*/
+data/*_test_results.json
 
 # Temporary files
 *.tmp

@@ -17,11 +17,23 @@ if not APIFY_TOKEN:
     exit(1)
 
 API_BASE = "https://api.apify.com/v2"
-ACTOR_ID = "apify~facebook-marketplace-scraper"
+CONFIG_PATH = Path("config/marketplace_sources.json")
+
+
+def load_config():
+    if not CONFIG_PATH.exists():
+        return {}
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f).get("facebook_marketplace", {})
+
+
+CONFIG = load_config()
+ACTOR_ID = CONFIG.get("actor_id", "apify~facebook-marketplace-scraper")
 
 # Production settings
-MAX_ITEMS_PER_URL = 25
+RESULTS_LIMIT_PER_URL = int(CONFIG.get("results_limit_per_url", 10))
 MAX_COST = 0.50
+ADD_TO_LEAD_INTAKE = os.environ.get("ADD_FACEBOOK_TO_LEAD_INTAKE") == "1"
 
 # Output paths
 OUTPUT_DIR = Path("data/external_leads")
@@ -30,17 +42,11 @@ CSV_OUTPUT = OUTPUT_DIR / "facebook_marketplace_leads.csv"
 LEAD_INTAKE = Path("lead_intake.csv")
 
 # Best First Search List - Athens/Atlanta
-SEARCH_URLS = [
-    # Athens, GA (Local Priority)
+SEARCH_URLS = CONFIG.get("search_urls") or [
     "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20stereo",
     "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20receiver",
-    "https://www.facebook.com/marketplace/athens-ga/search/?query=technics%20sl-1200",
-    "https://www.facebook.com/marketplace/athens-ga/search/?query=mcintosh%20amplifier",
-    # Atlanta, GA (Secondary Market)
-    "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20stereo",
-    "https://www.facebook.com/marketplace/atlanta/search/?query=technics%20sl-1200",
-    "https://www.facebook.com/marketplace/atlanta/search/?query=mcintosh%20amplifier",
-    "https://www.facebook.com/marketplace/atlanta/search/?query=marantz%20receiver",
+    "https://www.facebook.com/marketplace/athens-ga/search/?query=turntable",
+    "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20receiver",
 ]
 
 
@@ -54,7 +60,7 @@ def run_scraper():
     print("⚠️  NEEDS_MANUAL_REVIEW")
     print()
     print(f"Settings:")
-    print(f"  Max items per URL: {MAX_ITEMS_PER_URL}")
+    print(f"  Results limit per URL: {RESULTS_LIMIT_PER_URL}")
     print(f"  Max cost: ${MAX_COST}")
     print(f"  URLs: {len(SEARCH_URLS)}")
     print()
@@ -62,7 +68,9 @@ def run_scraper():
     # Actor input
     actor_input = {
         "startUrls": [{"url": url} for url in SEARCH_URLS],
-        "maxItems": MAX_ITEMS_PER_URL,
+        # Official actor input uses resultsLimit. maxItems can be ignored and
+        # lead to expensive over-collection.
+        "resultsLimit": RESULTS_LIMIT_PER_URL,
         "extendOutputFunction": "",
         "proxyConfiguration": {
             "useApifyProxy": True
@@ -316,9 +324,13 @@ def main():
             print(f"   ${item['price']} | {item['location']}")
         print()
         
-        # Add to lead intake
-        add_to_lead_intake(candidates)
-        print()
+        if ADD_TO_LEAD_INTAKE:
+            add_to_lead_intake(candidates)
+            print()
+        else:
+            print("Lead intake append skipped. Run scripts/update_lead_history.py instead.")
+            print("Set ADD_FACEBOOK_TO_LEAD_INTAKE=1 only for manual one-off intake append.")
+            print()
     else:
         print("⚠️  No quality candidates found after filtering")
         print()

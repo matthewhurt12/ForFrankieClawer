@@ -17,11 +17,23 @@ if not APIFY_TOKEN:
     exit(1)
 
 API_BASE = "https://api.apify.com/v2"
-ACTOR_ID = "stealth_mode~mercari-product-search-scraper"
+CONFIG_PATH = Path("config/marketplace_sources.json")
+
+
+def load_config():
+    if not CONFIG_PATH.exists():
+        return {}
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f).get("mercari", {})
+
+
+CONFIG = load_config()
+ACTOR_ID = CONFIG.get("actor_id", "stealth_mode~mercari-product-search-scraper")
 
 # Production settings
-MAX_ITEMS_PER_URL = 50
+MAX_ITEMS_PER_URL = int(CONFIG.get("max_items_per_url", 10))
 MAX_COST = 0.50  # dollars
+ADD_TO_LEAD_INTAKE = os.environ.get("ADD_MERCARI_TO_LEAD_INTAKE") == "1"
 
 # Output paths
 OUTPUT_DIR = Path("data/external_leads")
@@ -30,15 +42,13 @@ CSV_OUTPUT = OUTPUT_DIR / "mercari_leads.csv"
 LEAD_INTAKE = Path("lead_intake.csv")
 
 # Target searches
-SEARCHES = [
-    "McIntosh MA 5100",
-    "McIntosh MA 6100",
-    "Pioneer SX-1250",
-    "Pioneer SX-1050",
-    "Marantz 2270",
-    "Marantz 2275",
-    "Technics SL-1200",
-    "Nakamichi Dragon",
+SEARCHES = CONFIG.get("search_terms") or [
+    "vintage stereo receiver",
+    "Realistic receiver",
+    "Pioneer receiver",
+    "Marantz receiver",
+    "Technics turntable",
+    "cassette deck",
 ]
 
 def run_search(query):
@@ -108,14 +118,19 @@ def normalize_item(item, query):
         except:
             pass
     
+    item_id = item.get('id')
+    listing_url = item.get('url')
+    if not listing_url and item_id:
+        listing_url = f"https://www.mercari.com/us/item/{item_id}/"
+
     return {
         'source': 'mercari_apify',
-        'item_id': item.get('id'),
+        'item_id': item_id,
         'title': item.get('name'),
         'status': item.get('status'),
         'price_cents': price_cents,
         'price_usd': f"{price_usd:.2f}" if price_usd else None,
-        'url': item.get('url'),
+        'url': listing_url,
         'image_url': item.get('thumbnails', [None])[0] if item.get('thumbnails') else None,
         'condition': item.get('itemCondition'),
         'shipping_payer': item.get('shippingPayer'),
@@ -296,9 +311,13 @@ def main():
             print(f"   ${item['price_usd']} | {item['query']} | {item['condition']}")
         print()
         
-        # Add to lead intake
-        add_to_lead_intake(candidates)
-        print()
+        if ADD_TO_LEAD_INTAKE:
+            add_to_lead_intake(candidates)
+            print()
+        else:
+            print("Lead intake append skipped. Run scripts/update_lead_history.py instead.")
+            print("Set ADD_MERCARI_TO_LEAD_INTAKE=1 only for manual one-off intake append.")
+            print()
     
     # Estimate cost
     estimated_cost = len(SEARCHES) * 0.015  # ~$0.015 per search

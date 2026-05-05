@@ -37,9 +37,49 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Skill Discovery
+
+If Matthew asks for a skill, workflow, or slash command, start here:
+
+1. `START_HERE.md`
+2. `COMMANDS.md`
+3. `skills/manifest.json`
+4. `skills/<name>/SKILL.md`
+
+Quick terminal helper:
+
+```powershell
+python scripts\list_skills.py
+```
+
+Workspace health check:
+
+```powershell
+python scripts\workspace_doctor.py
+```
+
+Current local skills:
+
+- `arbitrage-deal-desk` - retro tech arbitrage pipeline and Deal Desk.
+- `page-map` - browser/page element map before automation.
+- `signals` - `/signals`, full Signal Engine report.
+- `radar` - `/radar`, quick current scan.
+- `bigpic` - `/bigpic`, strategic synthesis.
+- `ideas` - `/ideas`, build and opportunity report.
+
+Important: slash commands are not magic unless the runtime recognizes them.
+If `/bigpic` or `/signals` is not auto-routed, open `COMMANDS.md` manually and
+then the matching `SKILL.md`.
+
+---
+
 ## Memory System
 
-**Vault location:** `/home/matthew/openclaw-vault`
+**Current workspace:** `C:\Users\matth\Frankie Mind`
+
+**Signal Engine vault:** `C:\Users\matth\Documents\openclaw-vault`
+
+**Older WSL vault path:** `/home/matthew/openclaw-vault`
 
 ### Obsidian Integration
 Memory files use [[wiki links]] and #tags for Obsidian compatibility.

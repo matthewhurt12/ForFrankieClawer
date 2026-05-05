@@ -22,6 +22,27 @@ Do not manually reread startup files unless:
 2. The provided context is missing something you need
 3. You need a deeper follow-up read beyond the provided startup context
 
+### Navigation First
+
+After pulling a fresh copy of this repo, run:
+
+```powershell
+python scripts\frankie_start.py
+```
+
+If you are unsure where something lives, or Matthew asks for a skill, slash
+command, workflow, project, or "that thing we built," read `START_HERE.md`.
+
+If Matthew uses a slash command such as `/signals`, `/bigpic`, `/radar`, or
+`/ideas`, read `COMMANDS.md` and then the matching `skills/<name>/SKILL.md`.
+
+Do not say a skill cannot be found until you have checked:
+
+1. `COMMANDS.md`
+2. `skills/manifest.json`
+3. `.openclaw/skill-manifest.json`
+4. `skills/*/SKILL.md`
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
@@ -121,6 +142,22 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 ## Tools
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
+
+Skill discovery files:
+
+- `skills/README.md` - human index
+- `skills/manifest.json` - machine-readable index
+- `.openclaw/skill-manifest.json` - OpenClaw-facing copy
+- `COMMANDS.md` - slash command router
+
+Current key skills:
+
+- `arbitrage-deal-desk`
+- `page-map`
+- `signals`
+- `radar`
+- `bigpic`
+- `ideas`
 
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "updated": "2026-05-05",
+  "skills": [
+    {
+      "name": "arbitrage-deal-desk",
+      "path": "skills/arbitrage-deal-desk/SKILL.md",
+      "triggers": ["arbitrage", "deal desk", "resale leads", "mercari", "facebook marketplace", "ebay sold comps", "photo verification"],
+      "summary": "Run and explain the retro tech arbitrage pipeline.",
+      "safe_default": "python scripts\\run_arbitrage_pipeline.py"
+    },
+    {
+      "name": "page-map",
+      "path": "skills/page-map/SKILL.md",
+      "triggers": ["page-map", "browser automation", "map page", "find buttons", "inspect site"],
+      "summary": "Map interactive page elements before browser automation."
+    },
+    {
+      "name": "signals",
+      "path": "skills/signals/SKILL.md",
+      "slash_commands": ["/signals"],
+      "triggers": ["signals", "signal report", "full signal report"],
+      "summary": "Generate the full Signal Engine report."
+    },
+    {
+      "name": "radar",
+      "path": "skills/radar/SKILL.md",
+      "slash_commands": ["/radar"],
+      "triggers": ["radar", "what happened", "quick scan"],
+      "summary": "Generate the quick current signal scan."
+    },
+    {
+      "name": "bigpic",
+      "path": "skills/bigpic/SKILL.md",
+      "slash_commands": ["/bigpic"],
+      "triggers": ["bigpic", "big picture", "strategic synthesis", "core thesis"],
+      "summary": "Generate the strategic big-picture synthesis."
+    },
+    {
+      "name": "ideas",
+      "path": "skills/ideas/SKILL.md",
+      "slash_commands": ["/ideas"],
+      "triggers": ["ideas", "opportunities", "what should I build"],
+      "summary": "Generate practical build and business opportunities."
+    }
+  ]
+}

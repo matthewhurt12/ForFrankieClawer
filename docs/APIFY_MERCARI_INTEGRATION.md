@@ -18,7 +18,7 @@
 
 ```bash
 # Add to ~/.bashrc or ~/.zshrc
-export APIFY_TOKEN='apify_api_xxxxxxxxxxxxxxxxxxxxx'
+export APIFY_TOKEN='[REDACTED_APIFY_TOKEN]'
 
 # Or set temporarily:
 export APIFY_TOKEN='your-token-here'

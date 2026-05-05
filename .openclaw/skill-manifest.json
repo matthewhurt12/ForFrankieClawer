@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "updated": "2026-05-05",
+  "note": "Open this file when a user asks for a skill or slash command. Then open the matching SKILL.md.",
+  "skills": [
+    {
+      "name": "arbitrage-deal-desk",
+      "path": "skills/arbitrage-deal-desk/SKILL.md",
+      "triggers": ["arbitrage", "deal desk", "resale leads", "mercari", "facebook marketplace", "ebay sold comps", "photo verification"]
+    },
+    {
+      "name": "page-map",
+      "path": "skills/page-map/SKILL.md",
+      "triggers": ["page-map", "browser automation", "map page", "find buttons", "inspect site"]
+    },
+    {
+      "name": "signals",
+      "path": "skills/signals/SKILL.md",
+      "slash_commands": ["/signals"],
+      "triggers": ["signals", "signal report"]
+    },
+    {
+      "name": "radar",
+      "path": "skills/radar/SKILL.md",
+      "slash_commands": ["/radar"],
+      "triggers": ["radar", "what happened", "quick scan"]
+    },
+    {
+      "name": "bigpic",
+      "path": "skills/bigpic/SKILL.md",
+      "slash_commands": ["/bigpic"],
+      "triggers": ["big picture", "strategic synthesis", "core thesis"]
+    },
+    {
+      "name": "ideas",
+      "path": "skills/ideas/SKILL.md",
+      "slash_commands": ["/ideas"],
+      "triggers": ["ideas", "opportunities", "what should I build"]
+    }
+  ]
+}

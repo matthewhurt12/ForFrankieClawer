@@ -1,0 +1,39 @@
+{
+  "mercari": {
+    "actor_id": "stealth_mode~mercari-product-search-scraper",
+    "max_items_per_url": 8,
+    "use_apify_proxy": true,
+    "search_terms": [
+      "vintage stereo receiver",
+      "Realistic receiver",
+      "cassette deck",
+      "Nintendo Wii console",
+      "Nintendo GameCube console",
+      "Nintendo 64 console",
+      "Apple iMac G3",
+      "Apple Power Mac G4",
+      "iPod classic"
+    ]
+  },
+  "facebook_marketplace": {
+    "actor_id": "apify~facebook-marketplace-scraper",
+    "results_limit_per_url": 8,
+    "use_apify_proxy": true,
+    "search_urls": [
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20stereo",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20receiver",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=nintendo%20wii",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=gamecube",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20computer",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20receiver",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=nintendo%20wii",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20mac"
+    ]
+  },
+  "ebay_sold_comps": {
+    "actor_id": "oTtB3VgfuE9GtxQt2",
+    "days_to_scrape": 30,
+    "count_per_keyword": 5,
+    "minimum_clean_full_unit_comps": 3
+  }
+}

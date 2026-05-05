@@ -78,6 +78,14 @@ def detect_model(model_guess, title):
     return "Unknown model", "unknown", 0
 
 
+def is_exact_model(model):
+    """Return True only when the detected model is specific enough for research."""
+    if not model:
+        return False
+    lowered = model.lower()
+    return "unknown" not in lowered and "(model unknown)" not in lowered
+
+
 def run_ebay_search(model):
     """Run eBay active context search for the model."""
     print(f"  Running eBay active context search for: {model}")
@@ -214,12 +222,18 @@ def generate_report(lead, lead_id):
     print(f"Price Floor: ${category_floor}")
     print()
     
-    # Run eBay search
-    print("Step 1: Fetching active market context...")
-    ebay_metrics = run_ebay_search(model)
-    
-    if not ebay_metrics:
-        print("⚠️  Could not fetch eBay data. Manual research required.")
+    exact_model = is_exact_model(model)
+
+    # Run eBay active context only for exact models. Active listings are never
+    # used as proof of resale value.
+    print("Step 1: Active market context gate...")
+    if exact_model:
+        ebay_metrics = run_ebay_search(model)
+        if not ebay_metrics:
+            print("  Could not fetch eBay active context. Manual research optional.")
+            ebay_metrics = {}
+    else:
+        print("  Skipped active context: exact model is not identified.")
         ebay_metrics = {}
     
     print()
@@ -244,33 +258,16 @@ def generate_report(lead, lead_id):
         print("  No data available")
     print()
     
-    # Margin analysis
-    print("Step 4: Margin Potential")
+    # Sold comp gate
+    print("Step 4: Sold Comp Gate")
     print("-" * 80)
-    discount_pct, risk_flags = calculate_margin_potential(
-        lead.get("asking_price", 0),
-        ebay_metrics.get("median_price"),
-        category_floor
-    )
-    
-    if discount_pct is not None:
-        print(f"  Discount vs Median Active: {discount_pct:.0f}%")
-        
-        if discount_pct >= 40:
-            print(f"  ✓ STRONG margin potential")
-        elif discount_pct >= 25:
-            print(f"  ⚠️  MODERATE margin potential")
-        else:
-            print(f"  ✗ WEAK margin potential")
-    else:
-        print("  Unable to calculate (missing price data)")
-    
+    discount_pct = None
+    risk_flags = []
+    print("  No profit or max-buy estimate generated from active listings.")
+    print("  Required before pricing: exact model, full-unit photo verification, and at least 3 clean sold comps.")
+    if not exact_model:
+        risk_flags.append("Exact model is missing; do not run broad sold comps or active median math.")
     print()
-    if risk_flags:
-        print("  Risk Flags:")
-        for flag in risk_flags:
-            print(f"    - {flag}")
-        print()
     
     # Seller questions
     print("Step 5: Seller Questions")
@@ -295,12 +292,12 @@ def generate_report(lead, lead_id):
     print("  4. In-person inspection or video call demo if high value")
     print()
     
-    if discount_pct and discount_pct >= 30 and not risk_flags:
-        print("✓ INVESTIGATE - Strong margin potential if sold comps confirm")
-    elif risk_flags:
-        print("⚠️  CAUTION - Review risk flags before proceeding")
+    if exact_model and not risk_flags:
+        print("INVESTIGATE - Exact model found; verify full-unit photos and run sold comps")
+    elif exact_model:
+        print("WATCH - Exact model found, but risk flags must be resolved first")
     else:
-        print("✗ PASS - Insufficient margin potential")
+        print("SKIP/WATCH - Exact model required before underwriting")
     
     print()
     print("=" * 80)
@@ -356,19 +353,13 @@ def save_detailed_report(lead, lead_id, model, category, category_floor, ebay_me
             f.write("No active market data available.\n\n")
         
         f.write("---\n\n")
-        f.write("## Margin Analysis\n\n")
-        
-        if discount_pct is not None:
-            f.write(f"**Discount vs Median Active:** {discount_pct:.1f}%\n\n")
-            
-            if discount_pct >= 40:
-                f.write("✓ **STRONG margin potential**\n\n")
-            elif discount_pct >= 25:
-                f.write("⚠️ **MODERATE margin potential**\n\n")
-            else:
-                f.write("✗ **WEAK margin potential**\n\n")
-        else:
-            f.write("Unable to calculate (missing price data)\n\n")
+        f.write("## Sold Comp Gate\n\n")
+        f.write("No profit or max-buy estimate generated from active listings.\n\n")
+        f.write("Required before pricing:\n\n")
+        f.write("1. Exact model confirmed\n")
+        f.write("2. Photos verify complete equipment, not parts/accessories\n")
+        f.write("3. At least 3 clean eBay sold comps available\n")
+        f.write("4. Fees, shipping, repair reserve, return reserve, and required profit included\n\n")
         
         if risk_flags:
             f.write("### Risk Flags\n\n")
@@ -391,15 +382,16 @@ def save_detailed_report(lead, lead_id, model, category, category_floor, ebay_me
         f.write("3. Photos reviewed (especially back panel, condition)\n")
         f.write("4. In-person inspection or video call demo if high value\n\n")
         
-        if discount_pct and discount_pct >= 30 and not risk_flags:
-            f.write("### Recommendation: ✓ INVESTIGATE\n\n")
-            f.write("Strong margin potential if sold comps confirm active market pricing.\n\n")
-        elif risk_flags:
-            f.write("### Recommendation: ⚠️ CAUTION\n\n")
-            f.write("Review risk flags before proceeding. May be parts unit or overpriced.\n\n")
+        exact_model = is_exact_model(model)
+        if exact_model and not risk_flags:
+            f.write("### Recommendation: INVESTIGATE\n\n")
+            f.write("Exact model found. Verify full-unit photos and run clean sold comps before any price estimate.\n\n")
+        elif exact_model:
+            f.write("### Recommendation: WATCH\n\n")
+            f.write("Exact model found, but risk flags must be resolved before seller action.\n\n")
         else:
-            f.write("### Recommendation: ✗ PASS\n\n")
-            f.write("Insufficient margin potential for the risk.\n\n")
+            f.write("### Recommendation: SKIP/WATCH\n\n")
+            f.write("Exact model required before underwriting. Do not use broad active listings.\n\n")
 
 
 def main():

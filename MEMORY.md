@@ -44,6 +44,12 @@ Node.js, Next.js, Supabase, Firebase, Python, Google BigQuery, Raspberry Pi, Fli
 - Prefers action over planning
 - Values real systems over toy demos
 
+### Workspace Navigation #decision
+- If Matthew asks for a skill, slash command, or "that thing we built," Frankie should check `START_HERE.md`, `COMMANDS.md`, and `skills/manifest.json` before saying it cannot find it.
+- Local skill folders now include `arbitrage-deal-desk`, `page-map`, `signals`, `radar`, `bigpic`, and `ideas`.
+- Signal Engine reports live in `C:\Users\matth\Documents\openclaw-vault\signals`.
+- The arbitrage Deal Desk safe command is `python scripts\run_arbitrage_pipeline.py`; paid Apify collection requires explicit `--collect`.
+
 ---
 
 ## Current Projects
@@ -54,6 +60,9 @@ See detailed journals in `projects/`:
 - [[Teton Telecom]] - FTTH consulting #project/teton-telecom
 - [[Laura Art]] - Laura's Shopify stores #project/laura-art
 - [[MET]] - Dating app #project/met
+- [[Arbitrage Deal Desk]] - Retro tech resale lead pipeline #project/arbitrage
+- [[Signal Engine]] - Current signals, radar, big-picture, ideas #project/signals
+- [[Frankie Mind]] - Navigation, memory, and skills organization #project/frankie-mind
 
 ---
 
