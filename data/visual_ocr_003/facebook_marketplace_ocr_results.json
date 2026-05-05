@@ -1,0 +1,14 @@
+[
+  {
+    "screenshot": "screenshots/browser_test_002/facebook_marketplace_01_initial.png",
+    "filename": "facebook_marketplace_01_initial.png",
+    "image_size": "1920x1080",
+    "text_lines": 5,
+    "total_chars": 97,
+    "prices_found": [],
+    "price_count": 0,
+    "detected_marketplace": "facebook",
+    "text_sample": "See more on Facebook\n\nEmail address or phone number\n\nForgotten password?\n\nor\n\nCreate new account\n",
+    "full_text_available": true
+  }
+]

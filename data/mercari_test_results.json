@@ -1,0 +1,1608 @@
+[
+  {
+    "id": "m65221386097",
+    "name": "Dragon Quest II",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m65221386097_1.jpg?1777434060",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m65221386097_1.jpg?1777434060&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 968989664,
+      "seller_id": 968989664,
+      "__typename": "PublicUser"
+    },
+    "price": 1570,
+    "original_price": 1570,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 2,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m99322591275",
+    "name": "PS Vita Case (Used)",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m99322591275_1.jpg?1776995399",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m99322591275_1.jpg?1776995399&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 470649298,
+      "seller_id": 470649298,
+      "__typename": "PublicUser"
+    },
+    "price": 4000,
+    "original_price": 4000,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 4,
+      "name": "Fair",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m38081228356",
+    "name": "Nintendo Switch Little Friends Dogs & Cats",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m38081228356_1.jpg?1776994077",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m38081228356_1.jpg?1776994077&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 176498938,
+      "seller_id": 176498938,
+      "__typename": "PublicUser"
+    },
+    "price": 2500,
+    "original_price": 2500,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 4591,
+      "name": "Nintendo",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m25597093887",
+    "name": "Playground - Nintendo Wii",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m25597093887_1.jpg?1776991265",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m25597093887_1.jpg?1776991265&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 653749802,
+      "seller_id": 653749802,
+      "__typename": "PublicUser"
+    },
+    "price": 499,
+    "original_price": 499,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m26497110263",
+    "name": "F-22 Interceptor Sega Genesis Video Game 16-Bit Fighter GAME ONLY Tested",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m26497110263_1.jpg?1776991046",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m26497110263_1.jpg?1776991046&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 195744992,
+      "seller_id": 195744992,
+      "__typename": "PublicUser"
+    },
+    "price": 599,
+    "original_price": 599,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m78602182768",
+    "name": "Injustice  2 Steelbook xbox one case no game",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m78602182768_1.jpg?1776967054",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m78602182768_1.jpg?1776967054&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 438880564,
+      "seller_id": 438880564,
+      "__typename": "PublicUser"
+    },
+    "price": 500,
+    "original_price": 500,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 4254,
+      "name": "Microsoft",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 4,
+      "name": "Fair",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m31066265548",
+    "name": "Madden NFL 16",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m31066265548_1.jpg?1776966733",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m31066265548_1.jpg?1776966733&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 520116691,
+      "seller_id": 520116691,
+      "__typename": "PublicUser"
+    },
+    "price": 739,
+    "original_price": 739,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 2003,
+      "name": "EA Sports",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m33195516592",
+    "name": "Resistance Fall of Man For PlayStation 3",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m33195516592_1.jpg?1776966720",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m33195516592_1.jpg?1776966720&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 438880564,
+      "seller_id": 438880564,
+      "__typename": "PublicUser"
+    },
+    "price": 500,
+    "original_price": 500,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 5937,
+      "name": "Sony",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m94701009639",
+    "name": "Just Dance 3 for Xbox 360",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m94701009639_1.jpg?1776965892",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m94701009639_1.jpg?1776965892&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 438880564,
+      "seller_id": 438880564,
+      "__typename": "PublicUser"
+    },
+    "price": 500,
+    "original_price": 500,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 4254,
+      "name": "Microsoft",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m69686959766",
+    "name": "Triple Play 2000 (PlayStation 1)",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m69686959766_1.jpg?1776965573",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m69686959766_1.jpg?1776965573&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 821671135,
+      "seller_id": 821671135,
+      "__typename": "PublicUser"
+    },
+    "price": 800,
+    "original_price": 800,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 5937,
+      "name": "Sony",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m79450653639",
+    "name": "Just Dance Kids - Nintendo  Wii Game No Manual Tested Family Friendly Fun Active",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m79450653639_1.jpg?1776964991",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m79450653639_1.jpg?1776964991&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 935400089,
+      "seller_id": 935400089,
+      "__typename": "PublicUser"
+    },
+    "price": 599,
+    "original_price": 599,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m52629221282",
+    "name": "JASF: Jane's Advanced Strike Fighters (Xbox 360, 2011) Complete, CIB - Tested",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m52629221282_1.jpg?1776964477",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m52629221282_1.jpg?1776964477&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 691063732,
+      "seller_id": 691063732,
+      "__typename": "PublicUser"
+    },
+    "price": 1999,
+    "original_price": 1999,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 4254,
+      "name": "Microsoft",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m83289987793",
+    "name": "Brand NEW Duke Nukem Forever (Microsoft Xbox 360, 2011)",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m83289987793_1.jpg?1776964014",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m83289987793_1.jpg?1776964014&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 258399408,
+      "seller_id": 258399408,
+      "__typename": "PublicUser"
+    },
+    "price": 1807,
+    "original_price": 1807,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 1,
+      "name": "New",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m55232593487",
+    "name": "The Lego Ninjago Movie Video Game for Nintendo Switch",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m55232593487_1.jpg?1776962433",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m55232593487_1.jpg?1776962433&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 795234316,
+      "seller_id": 795234316,
+      "__typename": "PublicUser"
+    },
+    "price": 1600,
+    "original_price": 1600,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 4591,
+      "name": "Nintendo",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 2,
+      "name": "Like new",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m62259238999",
+    "name": "Tom Clancy's Rainbow Six: Lockdown (PS2, 2005) CIB w/ Manual Good Condition",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m62259238999_1.jpg?1776961931",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m62259238999_1.jpg?1776961931&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 363971511,
+      "seller_id": 363971511,
+      "__typename": "PublicUser"
+    },
+    "price": 1195,
+    "original_price": 1195,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 6623,
+      "name": "Ubisoft",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m13309453188",
+    "name": "Pole Position for the Atari 5200",
+    "status": "trading",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m13309453188_1.jpg?1759938241",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m13309453188_1.jpg?1759938241&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 771848779,
+      "seller_id": 771848779,
+      "__typename": "PublicUser"
+    },
+    "price": 330,
+    "original_price": 1200,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": {
+      "text_color": "WHITE",
+      "background_color": "DARK_GRAY",
+      "icon": null,
+      "text": "SOLD",
+      "__typename": "ItemDecorationRectangle"
+    },
+    "promote_type": 1,
+    "promote_expire_time": 1777911946,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 400,
+      "name": "Atari",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 2,
+      "name": "Like new",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m91779793419",
+    "name": "Destiny 2",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m91779793419_1.jpg?1776961663",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m91779793419_1.jpg?1776961663&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 153713656,
+      "seller_id": 153713656,
+      "__typename": "PublicUser"
+    },
+    "price": 1200,
+    "original_price": 1200,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 5058,
+      "name": "PlayStation",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m62531806492",
+    "name": "Pac Man Atari 2600 Atari Inc Namco Arcade Retro Video Game Cartridge",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m62531806492_1.jpg?1776961651",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m62531806492_1.jpg?1776961651&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 584105547,
+      "seller_id": 584105547,
+      "__typename": "PublicUser"
+    },
+    "price": 700,
+    "original_price": 700,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 400,
+      "name": "Atari",
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 4,
+      "name": "Fair",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m67509255629",
+    "name": "Ms. Pac-Man- (GBC) Nintendo Gameboy Color - Game Case Only - No Game",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m67509255629_1.jpg?1776961236",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m67509255629_1.jpg?1776961236&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 558469696,
+      "seller_id": 558469696,
+      "__typename": "PublicUser"
+    },
+    "price": 1049,
+    "original_price": 1049,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 798,
+        "level": 2,
+        "name": "Accessories",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 1,
+      "name": "New",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 798,
+      "name": "Accessories",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Accessories",
+    "category_id": 798,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  },
+  {
+    "id": "m55285785640",
+    "name": "Frontlines: Fuel of War (Microsoft Xbox 360, 2008) Complete CIB",
+    "status": "on_sale",
+    "shipping_payer": {
+      "id": null,
+      "name": null,
+      "code": null,
+      "__typename": "ShippingPayer"
+    },
+    "photos": [
+      {
+        "image_url": "https://u-mercari-images.mercdn.net/photos/m55285785640_1.jpg?1776961204",
+        "thumbnail": "https://u-mercari-images.mercdn.net/photos/m55285785640_1.jpg?1776961204&width=200&height=200",
+        "__typename": "Photo"
+      }
+    ],
+    "seller": {
+      "id": 611001625,
+      "seller_id": 611001625,
+      "__typename": "PublicUser"
+    },
+    "price": 1440,
+    "original_price": 1440,
+    "item_decoration_circle": null,
+    "item_decoration_rectangle": null,
+    "promote_type": 0,
+    "promote_expire_time": 0,
+    "authentic_item_status": null,
+    "country_source": 1,
+    "brand": {
+      "id": 0,
+      "name": null,
+      "__typename": "ItemBrand"
+    },
+    "item_size": null,
+    "me": {
+      "is_item_liked": null,
+      "user_id": null,
+      "__typename": "ItemMe"
+    },
+    "description": "",
+    "item_category_hierarchy": [
+      {
+        "id": 7,
+        "level": 0,
+        "name": "Electronics",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 84,
+        "level": 1,
+        "name": "Video games & consoles",
+        "__typename": "ItemCategory"
+      },
+      {
+        "id": 796,
+        "level": 2,
+        "name": "Games",
+        "__typename": "ItemCategory"
+      }
+    ],
+    "item_condition": {
+      "id": 3,
+      "name": "Good",
+      "__typename": "ItemCondition"
+    },
+    "item_category": {
+      "id": 796,
+      "name": "Games",
+      "__typename": "ItemCategory"
+    },
+    "custom_facets_list": [],
+    "color": null,
+    "shipping_class": null,
+    "category_title": "Games",
+    "category_id": 796,
+    "search_final_score": 0,
+    "from_url": "https://www.mercari.com/us/category/84/?page=2"
+  }
+]

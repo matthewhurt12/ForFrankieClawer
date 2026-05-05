@@ -1,0 +1,50 @@
+# Environment and credentials
+.env
+*.token
+credentials/
+*.key
+*.json.secret
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Raw data
+data/raw/
+data/external_leads/*.json
+data/external_leads/*_raw_*.json
+data/ebay_active_search/*_raw_*.json
+data/test_outputs/
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (if any)
+node_modules/
+
+# Sensitive output
+reports/*_raw_*.md
+reports/actor_run_logs.txt

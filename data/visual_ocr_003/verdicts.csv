@@ -1,0 +1,5 @@
+site,verdict,reason
+Mercari,DROP,No screenshots available
+Google Shopping,KEEP,Prices and content detected - OCR viable
+Craigslist,DROP,No prices detected in OCR
+Facebook Marketplace,DROP,No prices detected in OCR | Very low text content (avg 5 lines) | Minimal text extracted (avg 97 chars)

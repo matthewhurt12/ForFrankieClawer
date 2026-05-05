@@ -1,0 +1,64 @@
+[
+  {
+    "site": "Mercari",
+    "url": "https://www.mercari.com/search/?keyword=vintage+receiver",
+    "search_term": "vintage receiver",
+    "timestamp": "2026-05-04T14:18:45.205335Z",
+    "status": "error",
+    "error": "Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+    "screenshots": [],
+    "items_parsed": [],
+    "notes": []
+  },
+  {
+    "site": "Google Shopping",
+    "url": "https://www.google.com/search?q=Pioneer+SX-1050&tbm=shop",
+    "search_term": "Pioneer SX-1050",
+    "timestamp": "2026-05-04T14:20:04.765983Z",
+    "status": "no_items_found",
+    "error": null,
+    "screenshots": [
+      "screenshots/browser_test_002/google_shopping_01_initial.png",
+      "screenshots/browser_test_002/google_shopping_02_scroll1.png",
+      "screenshots/browser_test_002/google_shopping_03_scroll2.png",
+      "screenshots/browser_test_002/google_shopping_04_scroll3.png"
+    ],
+    "items_parsed": [],
+    "notes": [
+      "Could not find items with known selectors"
+    ]
+  },
+  {
+    "site": "Craigslist",
+    "url": "https://athens.craigslist.org/search/sss?query=vintage+stereo",
+    "search_term": "vintage stereo",
+    "timestamp": "2026-05-04T14:20:45.546608Z",
+    "status": "no_items_found",
+    "error": null,
+    "screenshots": [
+      "screenshots/browser_test_002/craigslist_01_initial.png",
+      "screenshots/browser_test_002/craigslist_02_scroll1.png",
+      "screenshots/browser_test_002/craigslist_03_scroll2.png",
+      "screenshots/browser_test_002/craigslist_04_scroll3.png"
+    ],
+    "items_parsed": [],
+    "notes": [
+      "Could not find items with known selectors"
+    ]
+  },
+  {
+    "site": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/athens/search?query=vintage%20stereo",
+    "search_term": "vintage stereo",
+    "timestamp": "2026-05-04T14:21:19.558553Z",
+    "status": "login_required",
+    "error": null,
+    "screenshots": [
+      "screenshots/browser_test_002/facebook_marketplace_01_initial.png"
+    ],
+    "items_parsed": [],
+    "notes": [
+      "Facebook login required"
+    ]
+  }
+]
