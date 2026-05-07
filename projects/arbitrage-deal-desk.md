@@ -42,6 +42,17 @@ python scripts\run_ebay_sold_comps.py --keywords "Exact Model" --clean --merge -
 - `reports/LEAD_HISTORY_UPDATE_001.md`
 - `reports/PIPELINE_RUN_LAST.md`
 
+## Adjacent Workflow
+
+Freebie Radar is separate from underwriting:
+
+```powershell
+python scripts\freebie_radar.py
+```
+
+Use it for free, curb-alert, pickup-only, and very cheap local tech listings.
+Report: `reports/FREEBIE_RADAR_LAST.md`.
+
 ## Hard Rules
 
 - Never say BUY.

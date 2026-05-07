@@ -6,6 +6,12 @@ Most docs here are historical design notes. For daily operation, start with:
 - `../COMMANDS.md`
 - `../README.md`
 - `../reports/OPENCLAW_ARBITRAGE_RUNBOOK.md`
+- `APIFY_ACTOR_CATALOG.md`
+- `ATHENS_FOOD_SKILL.md`
+- `ATHENS_FOOD_ROADMAP.md`
+- `VOICE_OUTPUT.md`
+- `SMARTCORE_BILLING_SYSTEM.md`
+- `FREEBIE_RADAR.md`
 
 ## Useful Current References
 

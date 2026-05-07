@@ -4,6 +4,9 @@ Use this file to avoid confusing old reports with current operating reports.
 
 ## Current Reports
 
+- `ATHENS_FOOD_LAST.md`
+  - Last Athens restaurant recommendation from Matthew's restaurant list.
+
 - `OPENCLAW_ARBITRAGE_RUNBOOK.md`
   - Handoff guide for Frankie/OpenClaw.
 
@@ -18,6 +21,9 @@ Use this file to avoid confusing old reports with current operating reports.
 
 - `LEAD_HISTORY_UPDATE_001.md`
   - New listings, seen-before listings, price changes.
+
+- `FREEBIE_RADAR_LAST.md`
+  - New free, curb-alert, pickup-only, and very cheap local tech leads.
 
 - `EBAY_SOLD_COMPS_CLEANING_001.md`
   - Last sold-comp cleaning summary.

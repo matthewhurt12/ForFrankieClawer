@@ -60,6 +60,8 @@ python scripts\workspace_doctor.py
 
 Current local skills:
 
+- `athens-food` - Athens restaurant recommendations from Matthew's spreadsheet.
+- `voice-output` - ElevenLabs / `sag` voice-file navigation.
 - `arbitrage-deal-desk` - retro tech arbitrage pipeline and Deal Desk.
 - `page-map` - browser/page element map before automation.
 - `signals` - `/signals`, full Signal Engine report.
@@ -70,6 +72,26 @@ Current local skills:
 Important: slash commands are not magic unless the runtime recognizes them.
 If `/bigpic` or `/signals` is not auto-routed, open `COMMANDS.md` manually and
 then the matching `SKILL.md`.
+
+---
+
+## Voice / ElevenLabs
+
+When Matthew asks for a voice file, audio version, narration, storytime, or
+ElevenLabs/TTS output:
+
+1. Open `skills/voice-output/SKILL.md`.
+2. Check availability:
+
+```powershell
+Get-Command sag -ErrorAction SilentlyContinue
+sag --help
+```
+
+3. Save generated local audio under `data/voice_outputs/`.
+
+Current note: `sag` may not be on the Windows PowerShell PATH. If it is missing,
+say so and prepare a voice-ready script instead of claiming a file exists.
 
 ---
 

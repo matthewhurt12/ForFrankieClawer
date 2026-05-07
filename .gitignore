@@ -27,6 +27,11 @@ data/ebay_active_search/*_raw_*.json
 data/local_leads_*.json
 data/sold_comps/*.json
 data/sold_comps/*_clean.csv
+data/freebie_radar/raw/
+data/restaurants/enrichment/*.json
+data/voice_outputs/*
+!data/voice_outputs/README.md
+data/smartcore_billing/generated/
 data/test_outputs/
 data/visual_ocr_*/
 screenshots/browser_test_*/

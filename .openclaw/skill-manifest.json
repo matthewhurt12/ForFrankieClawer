@@ -1,12 +1,42 @@
 {
   "version": 1,
-  "updated": "2026-05-05",
+  "updated": "2026-05-07",
   "note": "Open this file when a user asks for a skill or slash command. Then open the matching SKILL.md.",
   "skills": [
+    {
+      "name": "athens-food",
+      "path": "skills/athens-food/SKILL.md",
+      "triggers": ["where should i eat", "athens food", "restaurant", "restaurants", "food mood", "random restaurant", "spontaneous restaurant", "cuisine"]
+    },
+    {
+      "name": "voice-output",
+      "path": "skills/voice-output/SKILL.md",
+      "triggers": ["voice file", "audio file", "read it to me", "elevenlabs", "eleven labs", "tts", "sag", "narrate", "storytime"]
+    },
     {
       "name": "arbitrage-deal-desk",
       "path": "skills/arbitrage-deal-desk/SKILL.md",
       "triggers": ["arbitrage", "deal desk", "resale leads", "mercari", "facebook marketplace", "ebay sold comps", "photo verification"]
+    },
+    {
+      "name": "freebie-radar",
+      "path": "skills/freebie-radar/SKILL.md",
+      "triggers": ["freebie radar", "free marketplace", "free facebook marketplace", "curb alert", "free pickup", "cheap local listings", "daily free scan"]
+    },
+    {
+      "name": "smartcore-billing",
+      "path": "skills/smartcore-billing/SKILL.md",
+      "triggers": ["smartcore billing", "invoice", "invoices", "billing email", "billing@smartcorefleet.com", "vehicle tracking bill", "asset tracking bill", "building monitoring bill", "proposal", "quote"]
+    },
+    {
+      "name": "apify-actors",
+      "path": "skills/apify-actors/SKILL.md",
+      "triggers": ["apify actors", "scrapers", "generic scraper", "website scraper", "apify store", "actor catalog", "what actors can we use"]
+    },
+    {
+      "name": "overwatch-rf",
+      "path": "skills/overwatch-rf/SKILL.md",
+      "triggers": ["overwatch", "wifi surveillance", "wifi monitor", "rf monitoring", "local signal environment", "daily overwatch check"]
     },
     {
       "name": "page-map",

@@ -38,16 +38,42 @@ REQUIRED_FILES = [
     "skills/README.md",
     "skills/manifest.json",
     ".openclaw/skill-manifest.json",
+    "skills/voice-output/SKILL.md",
     "scripts/frankie_start.py",
     "scripts/list_skills.py",
+    "scripts/athens_food.py",
+    "scripts/athens_food_google_check.py",
+    "scripts/athens_food_go_now.py",
+    "scripts/refresh_athens_restaurants.py",
+    "scripts/test_athens_food_filters.py",
+    "scripts/smartcore_billing.py",
+    "scripts/freebie_radar.py",
     "scripts/run_arbitrage_pipeline.py",
     "scripts/run_ebay_sold_comps.py",
+    "config/apify_actor_catalog.json",
+    "config/freebie_radar.json",
+    "config/smartcore_billing.json",
+    "data/restaurants/athens_restaurants.csv",
+    "data/voice_outputs/README.md",
     "reports/OPENCLAW_ARBITRAGE_RUNBOOK.md",
+    "docs/APIFY_ACTOR_CATALOG.md",
+    "docs/ATHENS_FOOD_SKILL.md",
+    "docs/ATHENS_FOOD_ROADMAP.md",
+    "docs/VOICE_OUTPUT.md",
+    "docs/FREEBIE_RADAR.md",
+    "docs/SMARTCORE_BILLING_SYSTEM.md",
 ]
 
 ACTIVE_PYTHON = [
     "scripts/frankie_start.py",
     "scripts/list_skills.py",
+    "scripts/athens_food.py",
+    "scripts/athens_food_google_check.py",
+    "scripts/athens_food_go_now.py",
+    "scripts/refresh_athens_restaurants.py",
+    "scripts/test_athens_food_filters.py",
+    "scripts/smartcore_billing.py",
+    "scripts/freebie_radar.py",
     "scripts/run_arbitrage_pipeline.py",
     "scripts/run_ebay_sold_comps.py",
     "scripts/arbitrage_logic.py",
@@ -101,7 +127,19 @@ def check_skill_manifest() -> list[Check]:
         names.add(name)
         checks.append(Check(f"skill path: {name}", path.exists(), rel(path) if path.exists() else f"missing {path}"))
 
-    expected = {"arbitrage-deal-desk", "page-map", "signals", "radar", "bigpic", "ideas"}
+    expected = {
+        "arbitrage-deal-desk",
+        "athens-food",
+        "voice-output",
+        "freebie-radar",
+        "smartcore-billing",
+        "apify-actors",
+        "page-map",
+        "signals",
+        "radar",
+        "bigpic",
+        "ideas",
+    }
     missing = sorted(expected - names)
     checks.append(Check("expected skills listed", not missing, "ok" if not missing else f"missing: {', '.join(missing)}"))
     return checks
@@ -139,6 +177,10 @@ def check_gitignore() -> list[Check]:
         "data/ebay_active_search/*.json",
         "data/sold_comps/*.json",
         "data/sold_comps/*_clean.csv",
+        "data/freebie_radar/raw/",
+        "data/restaurants/enrichment/*.json",
+        "data/voice_outputs/*",
+        "data/smartcore_billing/generated/",
         "data/browser_test_*/",
         "screenshots/browser_test_*/",
     ]

@@ -7,12 +7,28 @@
       "vintage stereo receiver",
       "Realistic receiver",
       "cassette deck",
+      "turntable",
       "Nintendo Wii console",
+      "Nintendo Wii U console",
       "Nintendo GameCube console",
       "Nintendo 64 console",
+      "Game Boy console",
+      "Nintendo DS console",
+      "Sony PSP console",
+      "PlayStation 2 console",
+      "Sega Dreamcast console",
+      "original Xbox console",
       "Apple iMac G3",
+      "Apple iMac G4",
       "Apple Power Mac G4",
-      "iPod classic"
+      "Macintosh Classic",
+      "Apple II computer",
+      "iPod classic",
+      "iPod nano",
+      "Sony Walkman cassette",
+      "Sony MiniDisc recorder",
+      "TI-84 calculator",
+      "vintage camcorder"
     ]
   },
   "facebook_marketplace": {
@@ -22,12 +38,27 @@
     "search_urls": [
       "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20stereo",
       "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20receiver",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=turntable",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=cassette%20deck",
       "https://www.facebook.com/marketplace/athens-ga/search/?query=nintendo%20wii",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=wii%20u",
       "https://www.facebook.com/marketplace/athens-ga/search/?query=gamecube",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=nintendo%2064",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=game%20boy",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=playstation%202",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=sony%20walkman",
       "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20computer",
+      "https://www.facebook.com/marketplace/athens-ga/search/?query=vintage%20mac",
       "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20receiver",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=turntable",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=cassette%20deck",
       "https://www.facebook.com/marketplace/atlanta/search/?query=nintendo%20wii",
-      "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20mac"
+      "https://www.facebook.com/marketplace/atlanta/search/?query=gamecube",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=sega%20dreamcast",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=ipod%20classic",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=sony%20minidisc",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=vintage%20mac",
+      "https://www.facebook.com/marketplace/atlanta/search/?query=macintosh%20classic"
     ]
   },
   "ebay_sold_comps": {

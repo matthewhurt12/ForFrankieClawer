@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "updated": "2026-05-05",
+  "rule": "Use specialized actors first. Use generic actors only for one-off research or sites without a reliable dedicated actor. Paid runs require Matthew's explicit approval.",
+  "core_marketplace_actors": [
+    {
+      "name": "Mercari Product Search Scraper",
+      "actor_id": "stealth_mode/mercari-product-search-scraper",
+      "current_config_id": "stealth_mode~mercari-product-search-scraper",
+      "status": "rented_and_core",
+      "use_for": "Buy-side marketplace leads from Mercari.",
+      "notes": "Use small max_items_per_url limits and Apify proxy. Active listing context only; never resale proof."
+    },
+    {
+      "name": "Facebook Marketplace Scraper",
+      "actor_id": "apify/facebook-marketplace-scraper",
+      "current_config_id": "apify~facebook-marketplace-scraper",
+      "status": "core_if_token_access_exists",
+      "use_for": "Athens/Atlanta local buy-side leads.",
+      "notes": "Use resultsLimit and dedupe by listing URL. Active listing context only."
+    },
+    {
+      "name": "eBay Sold Listings",
+      "actor_id": "caffein.dev/ebay-sold-listings",
+      "current_config_id": "oTtB3VgfuE9GtxQt2",
+      "status": "core_proof_layer",
+      "use_for": "Sold comps for exact model candidates only.",
+      "notes": "Run only after exact model is known. Clean parts/manual/accessory noise before underwriting."
+    }
+  ],
+  "generic_scrapers": [
+    {
+      "name": "Google Search Results / AI Search",
+      "actor_id": "nFJndFXA5zjCTuudP",
+      "priority": 0,
+      "use_for": "Current restaurant open/closed checks, Google result snippets, review/menu discovery, and lightweight web verification.",
+      "cost_posture": "medium",
+      "safe_default": "1 page per query, 5 results per page, AI/Perplexity/ChatGPT/Copilot disabled unless explicitly needed"
+    },
+    {
+      "name": "Website Content Crawler",
+      "actor_id": "apify/website-content-crawler",
+      "priority": 1,
+      "use_for": "General website text extraction, research, RAG/knowledge capture, docs, vendor pages.",
+      "cost_posture": "medium",
+      "safe_default": "1-5 URLs, no deep crawl, extract text/markdown only"
+    },
+    {
+      "name": "Cheerio Scraper",
+      "actor_id": "apify/cheerio-scraper",
+      "priority": 2,
+      "use_for": "Cheap structured scraping of static HTML pages.",
+      "cost_posture": "low",
+      "safe_default": "Use before browser scrapers when the page does not require JavaScript."
+    },
+    {
+      "name": "Web Scraper",
+      "actor_id": "apify/web-scraper",
+      "priority": 3,
+      "use_for": "General dynamic web pages with a browser and simple pageFunction extraction.",
+      "cost_posture": "medium_high",
+      "safe_default": "maxPagesPerCrawl <= 5, maxConcurrency <= 3, downloadMedia false unless needed"
+    },
+    {
+      "name": "Puppeteer Scraper",
+      "actor_id": "apify/puppeteer-scraper",
+      "priority": 4,
+      "use_for": "Custom browser automation when Web Scraper is too limited.",
+      "cost_posture": "high",
+      "safe_default": "Use only after a small Web Scraper/Cheerio test proves the target needs a browser."
+    },
+    {
+      "name": "Playwright Scraper",
+      "actor_id": "apify/playwright-scraper",
+      "priority": 5,
+      "use_for": "Custom browser scraping with Playwright-specific behavior.",
+      "cost_posture": "high",
+      "safe_default": "One-off tests only unless promoted to a dedicated task."
+    }
+  ],
+  "candidate_marketplace_actors": [
+    {
+      "name": "Craigslist Scraper",
+      "actor_id": "parseforge/craigslist-scraper",
+      "status": "candidate_later",
+      "use_for": "Athens/Atlanta local listings if Facebook misses local inventory.",
+      "notes": "Add only after the cost guard exists. Craigslist can be noisy."
+    },
+    {
+      "name": "Google Shopping Scraper",
+      "actor_id": "solidcode/google-shopping-scraper",
+      "status": "optional_context",
+      "use_for": "Retail/active price sanity checks, not resale proof.",
+      "notes": "Useful for knowing when an item is common/current retail inventory."
+    }
+  ]
+}

@@ -4,8 +4,18 @@ This folder contains reusable OpenClaw/Frankie skills for this mind.
 
 ## Available
 
+- `athens-food` - recommend Athens restaurants from Matthew's spreadsheet by
+  mood, cuisine, area, price, or random pick.
+- `voice-output` - navigate ElevenLabs / `sag` voice-file generation safely.
 - `page-map` - map interactive elements on a web page before browser automation.
 - `arbitrage-deal-desk` - run and explain the retro tech arbitrage pipeline.
+- `freebie-radar` - find free, curb-alert, pickup-only, and very cheap local
+  tech listings.
+- `smartcore-billing` - generate SmartCore invoice PDFs, HTML previews, and
+  email draft packages.
+- `apify-actors` - choose safe Apify actors and generic website scrapers.
+- `overwatch-rf` - navigate the real Overwatch WiFi monitor repo and run daily
+  passive trend reviews.
 - `signals` - full Signal Engine report for `/signals`.
 - `radar` - short current scan for `/radar`.
 - `bigpic` - strategic synthesis for `/bigpic`.

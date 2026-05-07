@@ -30,6 +30,18 @@ updates history and regenerates:
 - `reports/LEAD_HISTORY_UPDATE_001.md`
 - `reports/PIPELINE_RUN_LAST.md`
 
+Free local pickup / cheap listing radar is separate:
+
+```powershell
+python scripts\freebie_radar.py
+```
+
+That default command is local-only. It regenerates:
+
+- `reports/FREEBIE_RADAR_LAST.md`
+- `data/freebie_radar/freebie_radar_latest.csv`
+- `data/freebie_radar/freebie_radar_history.csv`
+
 To collect fresh marketplace leads, Matthew must explicitly approve a paid run:
 
 ```powershell
@@ -39,6 +51,13 @@ python scripts\run_arbitrage_pipeline.py --collect
 
 Mercari and Facebook are run in parallel when `--collect` is used. Do not run
 two Mercari jobs or two Facebook jobs at the same time.
+
+For a fresh paid Facebook freebie scan:
+
+```powershell
+$env:APIFY_TOKEN = "your-token"
+python scripts\freebie_radar.py --collect --sources facebook
+```
 
 ## What It Looks For
 
@@ -94,6 +113,7 @@ max buy price when clean sold comps are valid enough for underwriting.
 - `reports/OPENCLAW_ARBITRAGE_RUNBOOK.md` - handoff guide for Frankie
 - `config/marketplace_sources.json` - actor IDs, limits, and search terms
 - `scripts/run_arbitrage_pipeline.py` - safe one-command pipeline
+- `scripts/freebie_radar.py` - free/curb-alert/cheap local listing radar
 - `scripts/run_ebay_sold_comps.py` - exact-model sold comp actor runner
 - `scripts/arbitrage_logic.py` - shared filtering, model detection, scoring, underwriting
 - `reports/DEAL_DESK_REVIEW_001.md` - top recommendations
@@ -119,3 +139,16 @@ Read:
 - `reports/SIMPLE_THREE_SOURCE_PLAN.md`
 - `reports/THREE_SOURCE_SMOKE_TEST_2026-05-05.md`
 - `reports/APIFY_ACTOR_SMOKE_TEST_2026-05-05.md`
+
+## SmartCore Billing
+
+SmartCore invoice generation is local-only by default:
+
+```powershell
+python scripts\smartcore_billing.py validate
+python scripts\smartcore_billing.py plan --invoice-date YYYY-MM-DD --service-months YYYY-MM --start-number N
+python scripts\smartcore_billing.py generate --invoice-date YYYY-MM-DD --service-months YYYY-MM --start-number N
+```
+
+Generated PDFs, HTML previews, and email drafts are written to
+`data/smartcore_billing/generated/` and are not sent automatically.

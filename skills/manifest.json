@@ -1,13 +1,55 @@
 {
   "version": 1,
-  "updated": "2026-05-05",
+  "updated": "2026-05-07",
   "skills": [
+    {
+      "name": "athens-food",
+      "path": "skills/athens-food/SKILL.md",
+      "triggers": ["where should i eat", "athens food", "restaurant", "restaurants", "food mood", "random restaurant", "spontaneous restaurant", "cuisine"],
+      "summary": "Recommend Athens restaurants from Matthew's spreadsheet by mood, cuisine, area, price, or random pick.",
+      "safe_default": "python scripts\\athens_food.py recommend"
+    },
+    {
+      "name": "voice-output",
+      "path": "skills/voice-output/SKILL.md",
+      "triggers": ["voice file", "audio file", "read it to me", "elevenlabs", "eleven labs", "tts", "sag", "narrate", "storytime"],
+      "summary": "Navigate local ElevenLabs/sag voice output safely and save generated audio files.",
+      "safe_default": "Get-Command sag -ErrorAction SilentlyContinue"
+    },
     {
       "name": "arbitrage-deal-desk",
       "path": "skills/arbitrage-deal-desk/SKILL.md",
       "triggers": ["arbitrage", "deal desk", "resale leads", "mercari", "facebook marketplace", "ebay sold comps", "photo verification"],
       "summary": "Run and explain the retro tech arbitrage pipeline.",
       "safe_default": "python scripts\\run_arbitrage_pipeline.py"
+    },
+    {
+      "name": "freebie-radar",
+      "path": "skills/freebie-radar/SKILL.md",
+      "triggers": ["freebie radar", "free marketplace", "free facebook marketplace", "curb alert", "free pickup", "cheap local listings", "daily free scan"],
+      "summary": "Find new free, curb-alert, pickup-only, and very cheap local tech listings.",
+      "safe_default": "python scripts\\freebie_radar.py"
+    },
+    {
+      "name": "smartcore-billing",
+      "path": "skills/smartcore-billing/SKILL.md",
+      "triggers": ["smartcore billing", "invoice", "invoices", "billing email", "billing@smartcorefleet.com", "vehicle tracking bill", "asset tracking bill", "building monitoring bill", "proposal", "quote"],
+      "summary": "Generate SmartCore invoice PDFs, HTML previews, and email draft packages.",
+      "safe_default": "python scripts\\smartcore_billing.py validate"
+    },
+    {
+      "name": "apify-actors",
+      "path": "skills/apify-actors/SKILL.md",
+      "triggers": ["apify actors", "scrapers", "generic scraper", "website scraper", "apify store", "actor catalog", "what actors can we use"],
+      "summary": "Choose and document safe Apify actors for marketplace and general website scraping.",
+      "safe_default": "open docs/APIFY_ACTOR_CATALOG.md"
+    },
+    {
+      "name": "overwatch-rf",
+      "path": "skills/overwatch-rf/SKILL.md",
+      "triggers": ["overwatch", "wifi surveillance", "wifi monitor", "rf monitoring", "local signal environment", "daily overwatch check"],
+      "summary": "Navigate the real Overwatch WiFi monitor repo and generate passive daily trend reviews.",
+      "safe_default": "python scripts\\overwatch_daily.py status"
     },
     {
       "name": "page-map",

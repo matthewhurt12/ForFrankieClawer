@@ -39,6 +39,35 @@ def assessment_summary_line(item: LeadAssessment) -> str:
     )
 
 
+def select_diverse(items: list[LeadAssessment], limit: int, max_per_model: int = 1) -> list[LeadAssessment]:
+    selected: list[LeadAssessment] = []
+    model_counts: dict[str, int] = {}
+    selected_urls: set[str] = set()
+
+    for item in items:
+        url_key = (item.lead.url or f"{item.lead.source}:{item.lead.title}").lower()
+        if url_key in selected_urls:
+            continue
+        model_key = item.model.name or item.model.category or item.lead.title[:40].lower()
+        if model_counts.get(model_key, 0) >= max_per_model:
+            continue
+        selected.append(item)
+        selected_urls.add(url_key)
+        model_counts[model_key] = model_counts.get(model_key, 0) + 1
+        if len(selected) >= limit:
+            return selected
+
+    for item in items:
+        url_key = (item.lead.url or f"{item.lead.source}:{item.lead.title}").lower()
+        if url_key in selected_urls:
+            continue
+        selected.append(item)
+        selected_urls.add(url_key)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def terminal_safe(text: str) -> str:
     return text.encode("ascii", "replace").decode("ascii")
 
@@ -222,8 +251,8 @@ def main() -> None:
     assessments = [assess_lead(lead, sold_comp_index) for lead in leads]
     assessments.sort(key=lead_sort_key, reverse=True)
 
-    immediate = [a for a in assessments if a.verdict == "INVESTIGATE"][:5]
-    watchlist = [a for a in assessments if a.verdict == "WATCH"][:10]
+    immediate = select_diverse([a for a in assessments if a.verdict == "INVESTIGATE"], limit=5, max_per_model=1)
+    watchlist = select_diverse([a for a in assessments if a.verdict == "WATCH"], limit=10, max_per_model=2)
     skipped = [a for a in assessments if a.verdict == "SKIP"]
 
     class_counts = Counter(a.classification for a in assessments)

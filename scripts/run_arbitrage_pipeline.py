@@ -51,6 +51,8 @@ def run_step(name: str, command: list[str], env: dict[str, str]) -> StepResult:
         cwd=ROOT,
         env=env,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
     )
@@ -85,6 +87,8 @@ def run_parallel_collection(env: dict[str, str], sources: list[str]) -> list[Ste
                     cwd=ROOT,
                     env=env,
                     text=True,
+                    encoding="utf-8",
+                    errors="replace",
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                 ),
@@ -181,6 +185,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     args = parse_args()
     env = os.environ.copy()
     env.setdefault("PYTHONIOENCODING", "utf-8")

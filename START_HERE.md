@@ -54,9 +54,37 @@ Do not say a skill does not exist until you have checked those files.
 
 ## Current Important Skills
 
+- `skills/athens-food/SKILL.md`
+  - Athens restaurant recommendations from Matthew's spreadsheet.
+  - Safe local command: `python scripts\athens_food.py recommend`
+  - Verified go-now command: `python scripts\athens_food_go_now.py --mood "lunch hot fresh" --no-fast-food --no-bar-food`
+  - List refresh command: `python scripts\refresh_athens_restaurants.py`
+  - Filter safety test: `python scripts\test_athens_food_filters.py`
+
+- `skills/voice-output/SKILL.md`
+  - Voice file / ElevenLabs / `sag` navigation.
+  - Safe local command: `Get-Command sag -ErrorAction SilentlyContinue`
+
 - `skills/arbitrage-deal-desk/SKILL.md`
   - Retro tech and vintage audio arbitrage.
   - Safe local command: `python scripts\run_arbitrage_pipeline.py`
+
+- `skills/freebie-radar/SKILL.md`
+  - Free, curb-alert, pickup-only, and very cheap local tech listings.
+  - Safe local command: `python scripts\freebie_radar.py`
+
+- `skills/smartcore-billing/SKILL.md`
+  - SmartCore invoices, billing PDFs, HTML previews, and email draft packages.
+  - Safe local command: `python scripts\smartcore_billing.py validate`
+
+- `skills/apify-actors/SKILL.md`
+  - Apify actor catalog, generic scrapers, and safe actor selection.
+  - Reference file: `docs/APIFY_ACTOR_CATALOG.md`
+
+- `skills/overwatch-rf/SKILL.md`
+  - Overwatch WiFi monitor navigation and daily passive trend review.
+  - Real repo: `C:\Users\matth\overwatch-wifi-monitor`
+  - Safe local command: `python scripts\overwatch_daily.py status`
 
 - `skills/page-map/SKILL.md`
   - Browser/page element mapping before automation.
@@ -81,6 +109,7 @@ Do not say a skill does not exist until you have checked those files.
   - `reports/OPENCLAW_ARBITRAGE_RUNBOOK.md`
   - `reports/PHOTO_VERIFICATION_QUEUE_001.md`
   - `reports/DEAL_DESK_REVIEW_001.md`
+  - `reports/FREEBIE_RADAR_LAST.md`
 
 - Signal Engine:
   - `projects/signal-engine.md`
@@ -90,11 +119,35 @@ Do not say a skill does not exist until you have checked those files.
   - `C:\Users\matth\Documents\openclaw-vault\signals\bigpic`
   - `C:\Users\matth\Documents\openclaw-vault\signals\ideas`
 
+- Overwatch WiFi monitor:
+  - `docs/OVERWATCH_RF.md`
+  - `skills/overwatch-rf/SKILL.md`
+  - `scripts/overwatch_daily.py`
+  - `C:\Users\matth\overwatch-wifi-monitor`
+  - `C:\Users\matth\overwatch-wifi-monitor\docs\FRANKIE_OVERWATCH.md`
+
 - Frankie Mind navigation:
   - `projects/frankie-mind.md`
   - `START_HERE.md`
   - `COMMANDS.md`
   - `skills/manifest.json`
+
+- SmartCore billing:
+  - `projects/smartcore.md`
+  - `docs/SMARTCORE_BILLING_SYSTEM.md`
+  - `config/smartcore_billing.json`
+  - `skills/smartcore-billing/SKILL.md`
+  - `scripts/smartcore_billing.py`
+
+- Athens food:
+  - `docs/ATHENS_FOOD_SKILL.md`
+  - `data/restaurants/athens_restaurants.csv`
+  - `reports/ATHENS_FOOD_LAST.md`
+
+- Voice output:
+  - `docs/VOICE_OUTPUT.md`
+  - `skills/voice-output/SKILL.md`
+  - `data/voice_outputs/README.md`
 
 ## Memory Rules
 

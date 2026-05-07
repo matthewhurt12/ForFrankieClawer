@@ -1,0 +1,126 @@
+{
+  "company": {
+    "name": "SmartCore Solutions",
+    "address_lines": [
+      "246 West Hancock Avenue",
+      "Athens, Georgia 30601",
+      "United States"
+    ],
+    "phone": "4783194763",
+    "billing_email": "billing@smartcorefleet.com",
+    "logo_path": "assets/smartcore/smartcore_logo_invoice.png"
+  },
+  "invoice": {
+    "currency": "USD",
+    "due": "same_day_next_month",
+    "output_dir": "data/smartcore_billing/generated",
+    "filename_template": "SmartCore Solutions #{number} - {client_slug} - {service_month_name} {service_year}"
+  },
+  "clients": {
+    "donaldson_garrett": {
+      "company": "Donaldson Garrett & Associates Inc",
+      "contact": "Jim Garrett",
+      "address_lines": [
+        "4875 Riverside Drive",
+        "Macon, Georgia 31210",
+        "United States"
+      ],
+      "phone": "4787471225",
+      "email": "accounting@dg-a.com"
+    },
+    "progressive_communications": {
+      "company": "Progressive Communications",
+      "contact": "Serina McCoy",
+      "address_lines": [
+        "4875 Riverside Drive Macon, GA 31210",
+        "Macon, Georgia 31210",
+        "United States"
+      ],
+      "phone": "478-454-1011",
+      "email": "serina.mccoy@pcians.com"
+    },
+    "progressive_properties": {
+      "company": "Progressive Properties",
+      "contact": "Serina McCoy",
+      "address_lines": [],
+      "phone": "",
+      "email": "serina.mccoy@pcians.com"
+    }
+  },
+  "recurring_invoices": [
+    {
+      "key": "dga_vehicle_tracking",
+      "email_group": "vehicle_tracking",
+      "client": "donaldson_garrett",
+      "line_items": [
+        {
+          "name": "Vehicle Asset Tracking",
+          "description": "Bolt2 Digital Matter",
+          "quantity": 4,
+          "unit_price": 25.0
+        },
+        {
+          "name": "Service",
+          "description": "Monitoring and Sensors Detection",
+          "quantity": 1,
+          "unit_price": 20.0
+        }
+      ],
+      "note_template": "Vehicle Tracking Service for {service_month_name}. Total Trackers: 4"
+    },
+    {
+      "key": "pci_asset_tracking",
+      "email_group": "asset_tracking",
+      "client": "progressive_communications",
+      "line_items": [
+        {
+          "name": "Vehicle Asset Tracking",
+          "description": "Bolt2 Digital Matter",
+          "quantity": 15,
+          "unit_price": 25.0
+        }
+      ],
+      "note_template": "Vehicle Tracking Service for {service_month_name}. Total Trackers: 15"
+    },
+    {
+      "key": "progressive_building_monitoring",
+      "email_group": "building_monitoring",
+      "client": "progressive_properties",
+      "line_items": [
+        {
+          "name": "Service",
+          "description": "Monitoring and Sensors Detection",
+          "quantity": 1,
+          "unit_price": 500.0
+        }
+      ],
+      "note_template": "Monitoring Service for {service_month_name}."
+    }
+  ],
+  "email_groups": {
+    "vehicle_tracking": {
+      "subject_template": "SmartCore Solutions - Vehicle Tracking {invoice_numbers}",
+      "service_label": "Vehicle Tracking",
+      "to": [
+        "accounting@dg-a.com"
+      ],
+      "cc": []
+    },
+    "asset_tracking": {
+      "subject_template": "SmartCore Solutions - Asset Tracking {invoice_numbers}",
+      "service_label": "Asset Tracking",
+      "to": [
+        "serina.mccoy@pcians.com"
+      ],
+      "cc": []
+    },
+    "building_monitoring": {
+      "subject_template": "SmartCore Solutions - Building Monitoring {invoice_numbers}",
+      "service_label": "Building Monitoring",
+      "to": [
+        "serina.mccoy@pcians.com"
+      ],
+      "cc": []
+    }
+  }
+}

@@ -90,6 +90,13 @@ HARD_REJECT_TERMS = [
     "bias button",
     "level button",
     "disc only",
+    "disc for",
+    "mini disc for",
+    "minidisc for",
+    "blank minidisc",
+    "blank mini disc",
+    "lot of discs",
+    "lot of minidiscs",
     "game only",
     "case only",
     "box only",
@@ -110,6 +117,11 @@ HARD_REJECT_TERMS = [
     "we buy",
     "buying",
     "wanted",
+    "imitation",
+    "clone",
+    "replica",
+    "bootleg",
+    "emulator handheld",
 ]
 
 
@@ -139,8 +151,13 @@ EQUIPMENT_TERMS = [
     "nintendo",
     "gamecube",
     "playstation",
+    "psp",
+    "ps vita",
     "xbox",
     "sega",
+    "game boy",
+    "gameboy",
+    "nintendo ds",
     "macintosh",
     "imac",
     "power mac",
@@ -148,6 +165,10 @@ EQUIPMENT_TERMS = [
     "walkman",
     "discman",
     "minidisc",
+    "calculator",
+    "graphing calculator",
+    "camcorder",
+    "handycam",
     "computer",
     "deck",
     "stereo",
@@ -174,6 +195,14 @@ NEGATIVE_CONDITION_TERMS = [
     "needs work",
     "needs repair",
     "needs tlc",
+    "read description",
+    "issue",
+    "issues",
+    "tube issue",
+    "no hdd",
+    "no hard drive",
+    "missing hard drive",
+    "missing parts",
     "no sound",
     "hum",
     "dead channel",
@@ -217,6 +246,11 @@ BRANDS = [
     "xbox",
     "apple",
     "atari",
+    "panasonic",
+    "jvc",
+    "canon",
+    "texas instruments",
+    "ti",
     "kenwood",
     "denon",
     "teac",
@@ -262,10 +296,16 @@ MODEL_PRICE_FLOORS = {
     "Nintendo Wii U": 70,
     "Nintendo GameCube": 50,
     "Nintendo 64": 50,
+    "Nintendo Game Boy": 35,
+    "Nintendo Game Boy Advance": 35,
+    "Nintendo DS": 25,
+    "Nintendo 3DS": 75,
     "Super Nintendo": 50,
     "Nintendo NES": 50,
     "Sony PlayStation 2": 35,
     "Sony PlayStation 3": 40,
+    "Sony PSP": 45,
+    "Sony PS Vita": 100,
     "Sega Dreamcast": 100,
     "Sega Genesis": 30,
     "Xbox 360": 30,
@@ -281,9 +321,14 @@ MODEL_PRICE_FLOORS = {
     "Apple II": 150,
     "iPod Classic": 50,
     "iPod Mini": 25,
+    "iPod Nano": 20,
     "Sony Walkman": 25,
     "Sony Discman": 20,
     "Sony MiniDisc": 50,
+    "TI-84 Calculator": 35,
+    "TI-89 Calculator": 40,
+    "Sony Handycam": 40,
+    "Panasonic Camcorder": 40,
 }
 
 
@@ -352,7 +397,27 @@ class LeadAssessment:
 
 
 def normalize_space(value: Any) -> str:
-    return re.sub(r"\s+", " ", str(value or "")).strip()
+    text = str(value or "")
+    replacements = {
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u2013": "-",
+        "\u2014": "-",
+        "â€œ": '"',
+        "â€\x9d": '"',
+        "â€�": '"',
+        "â€˜": "'",
+        "â€™": "'",
+        "â€“": "-",
+        "â€”": "-",
+        "Â": "",
+        "�": "",
+    }
+    for bad, good in replacements.items():
+        text = text.replace(bad, good)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def parse_price(value: Any) -> float | None:
@@ -448,10 +513,16 @@ def detect_exact_model(title: str) -> ModelMatch:
         ("Nintendo Wii", "nintendo", "game console", [r"\bwii\b"]),
         ("Nintendo GameCube", "nintendo", "game console", [r"\bgame[\s-]?cube\b", "gamecube"]),
         ("Nintendo 64", "nintendo", "game console", [r"\bnintendo[\s-]?64\b", r"\bn64\b"]),
+        ("Nintendo Game Boy Advance", "nintendo", "game console", [r"\bgame[\s-]?boy\s+advance\b", r"\bgba\b"]),
+        ("Nintendo Game Boy", "nintendo", "game console", [r"\bgame[\s-]?boy\b", "gameboy"]),
+        ("Nintendo 3DS", "nintendo", "game console", [r"\bnintendo[\s-]?3ds\b", r"\b3ds\b"]),
+        ("Nintendo DS", "nintendo", "game console", [r"\bnintendo[\s-]?ds\b", r"\bds\s+lite\b"]),
         ("Super Nintendo", "nintendo", "game console", [r"\bsuper\s+nintendo\b", r"\bsnes\b"]),
         ("Nintendo NES", "nintendo", "game console", [r"\bnintendo\s+nes\b", r"\bnes\b"]),
         ("Sony PlayStation 2", "sony", "game console", [r"\bplaystation[\s-]?2\b", r"\bps2\b"]),
         ("Sony PlayStation 3", "sony", "game console", [r"\bplaystation[\s-]?3\b", r"\bps3\b"]),
+        ("Sony PSP", "sony", "game console", [r"\bpsp\b", r"\bplaystation\s+portable\b"]),
+        ("Sony PS Vita", "sony", "game console", [r"\bps[\s-]?vita\b", r"\bplaystation\s+vita\b"]),
         ("Sega Dreamcast", "sega", "game console", [r"\bdreamcast\b"]),
         ("Sega Genesis", "sega", "game console", [r"\bgenesis\b"]),
         ("Xbox 360", "microsoft", "game console", [r"\bxbox[\s-]?360\b"]),
@@ -467,9 +538,14 @@ def detect_exact_model(title: str) -> ModelMatch:
         ("Apple II", "apple", "computer", [r"\bapple\s*ii\b", r"\bapple\s*2\b"]),
         ("iPod Classic", "apple", "portable audio", [r"\bipod\s+classic\b"]),
         ("iPod Mini", "apple", "portable audio", [r"\bipod\s+mini\b"]),
+        ("iPod Nano", "apple", "portable audio", [r"\bipod\s+nano\b"]),
         ("Sony Walkman", "sony", "portable audio", [r"\bwalkman\b"]),
         ("Sony Discman", "sony", "portable audio", [r"\bdiscman\b"]),
         ("Sony MiniDisc", "sony", "portable audio", [r"\bminidisc\b", r"\bmini\s+disc\b"]),
+        ("TI-84 Calculator", "texas instruments", "calculator", [r"\bti[\s-]?84\b"]),
+        ("TI-89 Calculator", "texas instruments", "calculator", [r"\bti[\s-]?89\b"]),
+        ("Sony Handycam", "sony", "camcorder", [r"\bhandycam\b"]),
+        ("Panasonic Camcorder", "panasonic", "camcorder", [r"\bcamcorder\b"]),
     ]
 
     for model_name, brand, category, patterns in direct_patterns:
@@ -478,7 +554,7 @@ def detect_exact_model(title: str) -> ModelMatch:
             matched = re.search(pattern, text) is not None if pattern.startswith(r"\b") else pattern in compact
             if matched and (
                 brand_present
-                or brand in ["pioneer", "technics", "nakamichi", "nintendo", "sega", "microsoft", "apple", "sony"]
+                or brand in ["pioneer", "technics", "nakamichi", "nintendo", "sega", "microsoft", "apple", "sony", "texas instruments", "panasonic"]
             ):
                 return ModelMatch(
                     name=model_name,
@@ -568,12 +644,16 @@ def detect_equipment_category(title: str) -> str:
     text = title.lower()
     if any(term in text for term in ["turntable", "record player", "sl-1200", "sl 1200"]):
         return "turntable"
-    if any(term in text for term in ["console", "gamecube", "nintendo", "playstation", "xbox", "dreamcast", "genesis", " wii"]):
+    if any(term in text for term in ["console", "gamecube", "nintendo", "playstation", "psp", "ps vita", "xbox", "dreamcast", "genesis", "game boy", "gameboy", " wii"]):
         return "game console"
     if any(term in text for term in ["macintosh", "imac", "power mac", "apple ii", "vintage computer"]):
         return "computer"
     if any(term in text for term in ["ipod", "walkman", "discman", "minidisc", "mini disc"]):
         return "portable audio"
+    if any(term in text for term in ["ti-84", "ti 84", "ti-89", "ti 89", "graphing calculator"]):
+        return "calculator"
+    if any(term in text for term in ["camcorder", "handycam", "vhs-c", "hi8", "digital8"]):
+        return "camcorder"
     if any(term in text for term in ["receiver", "am/fm"]):
         return "receiver"
     if any(term in text for term in ["integrated amplifier", "amplifier", "power amp", " amp"]):
@@ -747,9 +827,39 @@ def assess_lead(lead: Lead, sold_comp_index: dict[str, dict[str, Any]] | None = 
         score += 10
     if negative_condition:
         score -= 25
+        if verdict == "INVESTIGATE":
+            verdict = "WATCH"
+        if classification == "NEEDS_SOLD_COMPS":
+            classification = "NEEDS_PHOTO_CHECK"
         condition_risk = "Title contains repair/untested/as-is language; reserve more repair risk or skip."
     elif verdict != "SKIP":
         condition_risk = "Condition not proven until photos, seller answers, or in-person test confirm it."
+
+    incomplete_console_terms = [
+        "console only",
+        "no cords",
+        "no cables",
+        "no controller",
+        "no controllers",
+        "japan",
+        "japanese",
+        "region locked",
+        "modded",
+    ]
+    incomplete_signal = first_matching_term(title, incomplete_console_terms)
+    if model.category == "game console" and incomplete_signal and verdict != "SKIP":
+        score -= 20
+        if verdict == "INVESTIGATE":
+            verdict = "WATCH"
+        if classification == "NEEDS_SOLD_COMPS":
+            classification = "NEEDS_PHOTO_CHECK"
+        junk_risk = (
+            f"Console listing has extra risk term `{incomplete_signal}`; may be incomplete, region-specific, "
+            "or harder to resell."
+        )
+        photo_verification = (
+            "Verify exact console revision/region, included cables/controllers, and proof it boots and reads media."
+        )
 
     if lead.image_url and verdict != "SKIP":
         score += 5
@@ -860,6 +970,10 @@ def verification_target(model: ModelMatch) -> str:
         return "front, back model label, screen/monitor, keyboard/mouse/cables, and a photo showing it booted"
     if model.category == "portable audio":
         return "front, back, battery compartment, charger/cable, and proof playback/output works"
+    if model.category == "calculator":
+        return "front, back, battery compartment, screen, buttons, and proof it powers on"
+    if model.category == "camcorder":
+        return "front, side model label, battery/charger, tape/media door, and proof it powers on/records"
     return "front panel, back panel label, all knobs/buttons, and no obvious damage"
 
 
@@ -870,6 +984,10 @@ def test_question(model: ModelMatch) -> str:
         return "Does it power on and boot? Are the screen, keyboard, mouse, and power cable included, and are there cracks or display issues?"
     if model.category == "portable audio":
         return "Does it power on and play audio through headphones or line out? Any battery corrosion or missing charger/cable?"
+    if model.category == "calculator":
+        return "Does it power on, are all buttons responsive, and is there any screen damage or battery corrosion?"
+    if model.category == "camcorder":
+        return "Does it power on with the charger/battery, open the tape/media door, and record or play back?"
     return "Does it power on and play through both channels? Any scratchy controls, hum, dead inputs, or missing knobs?"
 
 
@@ -935,6 +1053,10 @@ def estimated_shipping(model: ModelMatch) -> float:
         return 25.0
     if model.category == "portable audio":
         return 15.0
+    if model.category == "calculator":
+        return 12.0
+    if model.category == "camcorder":
+        return 25.0
     if model.category == "computer":
         return 60.0
     if model.category == "turntable":
@@ -953,6 +1075,10 @@ def underwriting_reserves(model: ModelMatch) -> dict[str, float]:
         return {"packaging": 12.0, "pickup_mileage": 10.0, "repair_reserve": 25.0, "return_reserve": 20.0, "required_profit": 50.0}
     if model.category == "portable audio":
         return {"packaging": 8.0, "pickup_mileage": 10.0, "repair_reserve": 20.0, "return_reserve": 15.0, "required_profit": 40.0}
+    if model.category == "calculator":
+        return {"packaging": 6.0, "pickup_mileage": 10.0, "repair_reserve": 10.0, "return_reserve": 10.0, "required_profit": 25.0}
+    if model.category == "camcorder":
+        return {"packaging": 12.0, "pickup_mileage": 10.0, "repair_reserve": 35.0, "return_reserve": 25.0, "required_profit": 50.0}
     if model.category == "computer":
         return {"packaging": 30.0, "pickup_mileage": 15.0, "repair_reserve": 100.0, "return_reserve": 50.0, "required_profit": 150.0}
     return {

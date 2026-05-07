@@ -152,7 +152,13 @@ Skill discovery files:
 
 Current key skills:
 
+- `athens-food`
+- `voice-output`
 - `arbitrage-deal-desk`
+- `freebie-radar`
+- `smartcore-billing`
+- `apify-actors`
+- `overwatch-rf`
 - `page-map`
 - `signals`
 - `radar`
