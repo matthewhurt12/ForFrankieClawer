@@ -69,15 +69,6 @@ When Matthew asks for an Overwatch check, answer these first:
 
 Keep the answer practical and calm. Lead with what changed.
 
-## Data Rules
-
-- Treat MAC addresses, probe requests, reports, and event logs as private local data.
-- Daily reports redact MAC addresses by default.
-- Do not commit raw scan data, databases, reports, or captures.
-- Keep Overwatch passive. Do not add deauth, cracking, credential capture,
-  packet payload capture, or anything that interferes with other networks.
-- Do not decode protected, encrypted, cellular, voice, or private traffic.
-
 ## Environment Variables
 
 The real repo supports:
