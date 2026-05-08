@@ -1,12 +1,12 @@
 # Workspace Health
 
-**Generated:** 2026-05-07 16:51 UTC
+**Generated:** 2026-05-08 16:16 UTC
 **Status:** OK
 
 ## Summary
 
-- **Checks:** 63
-- **Passed:** 63
+- **Checks:** 66
+- **Passed:** 66
 - **Failed:** 0
 
 ## Checks
@@ -20,9 +20,11 @@
 - **OK:** required file: skills/README.md - present
 - **OK:** required file: skills/manifest.json - present
 - **OK:** required file: .openclaw/skill-manifest.json - present
+- **OK:** required file: skills/intent-router/SKILL.md - present
 - **OK:** required file: skills/voice-output/SKILL.md - present
 - **OK:** required file: scripts/frankie_start.py - present
 - **OK:** required file: scripts/list_skills.py - present
+- **OK:** required file: scripts/intent_router.py - present
 - **OK:** required file: scripts/athens_food.py - present
 - **OK:** required file: scripts/athens_food_google_check.py - present
 - **OK:** required file: scripts/athens_food_go_now.py - present
@@ -45,6 +47,7 @@
 - **OK:** required file: docs/FREEBIE_RADAR.md - present
 - **OK:** required file: docs/SMARTCORE_BILLING_SYSTEM.md - present
 - **OK:** skills manifest parses - ok
+- **OK:** skill path: intent-router - skills\intent-router\SKILL.md
 - **OK:** skill path: athens-food - skills\athens-food\SKILL.md
 - **OK:** skill path: voice-output - skills\voice-output\SKILL.md
 - **OK:** skill path: arbitrage-deal-desk - skills\arbitrage-deal-desk\SKILL.md
@@ -58,7 +61,7 @@
 - **OK:** skill path: bigpic - skills\bigpic\SKILL.md
 - **OK:** skill path: ideas - skills\ideas\SKILL.md
 - **OK:** expected skills listed - ok
-- **OK:** openclaw manifest parses - 12 skills
+- **OK:** openclaw manifest parses - 13 skills
 - **OK:** active python compile - ok
 - **OK:** gitignore pattern: .env - present
 - **OK:** gitignore pattern: *.token - present

@@ -37,6 +37,10 @@ def print_next_steps() -> None:
     print("- COMMANDS.md")
     print("- FRANKIE_HANDOFF.md")
     print("")
+    print("Route ambiguous requests before inventing a plan:")
+    print(r'  python scripts\intent_router.py "Athens marketplace good deals in my area"')
+    print(r"  python scripts\intent_router.py --self-test")
+    print("")
     print("Athens food recommendation:")
     print(r"  python scripts\athens_food.py recommend")
     print(r"  python scripts\athens_food.py random")
@@ -80,6 +84,7 @@ def main() -> int:
 
     doctor_code = run_step("Workspace health check", [sys.executable, "scripts/workspace_doctor.py"])
     skills_code = run_step("Available skills", [sys.executable, "scripts/list_skills.py"])
+    router_code = run_step("Intent router self-test", [sys.executable, "scripts/intent_router.py", "--self-test"])
     pipeline_code = run_step(
         "Arbitrage pipeline dry run",
         [sys.executable, "scripts/run_arbitrage_pipeline.py", "--dry-run"],
@@ -87,7 +92,7 @@ def main() -> int:
 
     print_next_steps()
 
-    failed = [code for code in (doctor_code, skills_code, pipeline_code) if code != 0]
+    failed = [code for code in (doctor_code, skills_code, router_code, pipeline_code) if code != 0]
     if failed:
         print("\nStartup finished with issues. Open reports/WORKSPACE_HEALTH_LAST.md.")
         return 1

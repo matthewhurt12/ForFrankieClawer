@@ -16,6 +16,13 @@ python scripts\frankie_start.py
 
 Then read `FRANKIE_HANDOFF.md`.
 
+Before inventing a new strategy, route Matthew's exact request to the existing
+skill system:
+
+```powershell
+python scripts\intent_router.py "Athens marketplace good deals in my area"
+```
+
 Use the one-command runner:
 
 ```powershell

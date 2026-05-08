@@ -30,6 +30,26 @@ After pulling a fresh copy of this repo, run:
 python scripts\frankie_start.py
 ```
 
+### Intent First
+
+Before building a new strategy, ask: what is Matthew actually trying to do, and
+does an existing skill already cover it?
+
+For ambiguous requests, run:
+
+```powershell
+python scripts\intent_router.py "Matthew's exact request"
+```
+
+Then open the returned `skills/<name>/SKILL.md` and follow that workflow.
+Browser/search/manual scraping is a fallback, not the first move.
+
+Examples:
+
+- "Athens marketplace good deals near me" -> `freebie-radar`
+- "Is this Marketplace stereo worth flipping?" -> `arbitrage-deal-desk`
+- "No bar food, where should I eat?" -> `athens-food`
+
 If you are unsure where something lives, or Matthew asks for a skill, slash
 command, workflow, project, or "that thing we built," read `START_HERE.md`.
 
@@ -152,6 +172,7 @@ Skill discovery files:
 
 Current key skills:
 
+- `intent-router`
 - `athens-food`
 - `voice-output`
 - `arbitrage-deal-desk`

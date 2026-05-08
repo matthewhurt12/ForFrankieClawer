@@ -4,6 +4,12 @@ Use this file before guessing which script to run.
 
 ## Active Entry Points
 
+- `intent_router.py`
+  - Routes Matthew's exact request to the best existing skill before Frankie
+    invents a new strategy.
+  - Use `python scripts\intent_router.py "Athens marketplace good deals in my area"`.
+  - Use `--self-test` to verify common intent mappings.
+
 - `frankie_start.py`
   - First command after pulling the repo.
   - Runs workspace health, skill listing, and safe pipeline dry run.

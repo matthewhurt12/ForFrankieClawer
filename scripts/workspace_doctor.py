@@ -38,9 +38,11 @@ REQUIRED_FILES = [
     "skills/README.md",
     "skills/manifest.json",
     ".openclaw/skill-manifest.json",
+    "skills/intent-router/SKILL.md",
     "skills/voice-output/SKILL.md",
     "scripts/frankie_start.py",
     "scripts/list_skills.py",
+    "scripts/intent_router.py",
     "scripts/athens_food.py",
     "scripts/athens_food_google_check.py",
     "scripts/athens_food_go_now.py",
@@ -67,6 +69,7 @@ REQUIRED_FILES = [
 ACTIVE_PYTHON = [
     "scripts/frankie_start.py",
     "scripts/list_skills.py",
+    "scripts/intent_router.py",
     "scripts/athens_food.py",
     "scripts/athens_food_google_check.py",
     "scripts/athens_food_go_now.py",
@@ -128,12 +131,14 @@ def check_skill_manifest() -> list[Check]:
         checks.append(Check(f"skill path: {name}", path.exists(), rel(path) if path.exists() else f"missing {path}"))
 
     expected = {
+        "intent-router",
         "arbitrage-deal-desk",
         "athens-food",
         "voice-output",
         "freebie-radar",
         "smartcore-billing",
         "apify-actors",
+        "overwatch-rf",
         "page-map",
         "signals",
         "radar",

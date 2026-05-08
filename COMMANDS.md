@@ -2,6 +2,18 @@
 
 When Matthew uses a slash command or a short workflow name, route it here first.
 
+## Intent Router First
+
+Before inventing a new approach, classify Matthew's intent and check whether an
+existing skill already covers the job.
+
+```powershell
+python scripts\intent_router.py "Matthew's exact request"
+```
+
+If the router returns a skill, open that `SKILL.md` and use its existing
+workflow. Browser/search/manual scraping is a fallback, not the first move.
+
 ## Slash Commands
 
 | Command | Skill | File | Output |
@@ -15,10 +27,11 @@ When Matthew uses a slash command or a short workflow name, route it here first.
 
 | User Says | Use | File |
 |---|---|---|
+| unclear request, use your skills/tools, what skill should handle this, route this | `intent-router` | `skills/intent-router/SKILL.md` |
 | where should I eat, Athens food, restaurant, cuisine, food mood, random restaurant, spontaneous restaurant | `athens-food` | `skills/athens-food/SKILL.md` |
 | voice file, audio file, read it to me, ElevenLabs, Eleven Labs, TTS, sag, narrate, storytime | `voice-output` | `skills/voice-output/SKILL.md` |
-| arbitrage, deal desk, resale leads, Mercari, Facebook Marketplace, eBay sold comps | `arbitrage-deal-desk` | `skills/arbitrage-deal-desk/SKILL.md` |
-| freebie radar, free Facebook Marketplace, curb alert, free pickup, cheap local listings, daily free scan | `freebie-radar` | `skills/freebie-radar/SKILL.md` |
+| arbitrage, deal desk, resale leads, resale marketplace, flip, profit, Mercari, Facebook Marketplace with sold comps | `arbitrage-deal-desk` | `skills/arbitrage-deal-desk/SKILL.md` |
+| Athens marketplace, marketplace near me, marketplace in my area, local marketplace, local deals, good deals in my area, freebie radar, free Facebook Marketplace, curb alert, free pickup, cheap local listings, daily free scan | `freebie-radar` | `skills/freebie-radar/SKILL.md` |
 | SmartCore billing, invoices, billing email, vehicle tracking bill, asset tracking bill, building monitoring bill, quote, proposal | `smartcore-billing` | `skills/smartcore-billing/SKILL.md` |
 | Apify actors, scrapers, generic scraper, website scraper, actor catalog | `apify-actors` | `skills/apify-actors/SKILL.md` |
 | Overwatch, WiFi surveillance, WiFi monitor, RF monitoring, local signal environment, daily Overwatch check | `overwatch-rf` | `skills/overwatch-rf/SKILL.md` |
@@ -51,6 +64,8 @@ python scripts\list_skills.py
 | Command | Purpose |
 |---|---|
 | `python scripts\workspace_doctor.py` | Check navigation files, skill manifests, active Python scripts, `.gitignore`, and token-shaped strings |
+| `python scripts\intent_router.py "Athens marketplace good deals in my area"` | Route an ambiguous Matthew request to the best existing skill |
+| `python scripts\intent_router.py --self-test` | Verify common prompt intents map to the correct skills |
 | `python scripts\athens_food.py recommend` | Recommend an Athens restaurant from Matthew's list |
 | `python scripts\athens_food.py random` | Pick a spontaneous Athens restaurant from Matthew's list |
 | `python scripts\athens_food_go_now.py --mood "lunch hot fresh" --no-fast-food --no-bar-food` | Pick a restaurant only after Google open/closed and condition checks |

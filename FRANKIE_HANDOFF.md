@@ -21,6 +21,20 @@ If the startup check fails, open:
 
 Fix navigation or safety issues before running paid collection.
 
+## Intent Router Before Strategy
+
+Before inventing a new workflow, classify Matthew's request and route to an
+existing skill:
+
+```powershell
+python scripts\intent_router.py "Matthew's exact request"
+```
+
+If it returns a skill, open that `SKILL.md` and use the existing workflow.
+This is especially important for natural prompts like "Athens marketplace good
+deals near me" that should route to `freebie-radar`, not direct browser
+Facebook.
+
 ## What This Workspace Is
 
 This workspace has two main jobs:
@@ -39,6 +53,8 @@ Start with these files:
 
 ## Skills To Recognize
 
+- Ambiguous requests, "use your tools", "which skill handles this", local
+  marketplace wording -> `skills/intent-router/SKILL.md`
 - `/signals` -> `skills/signals/SKILL.md`
 - `/radar` -> `skills/radar/SKILL.md`
 - `/bigpic` -> `skills/bigpic/SKILL.md`
@@ -47,10 +63,12 @@ Start with these files:
   -> `skills/athens-food/SKILL.md`
 - Voice file, read it to me, ElevenLabs, TTS, `sag`, narrate, storytime
   -> `skills/voice-output/SKILL.md`
-- Arbitrage, deal desk, resale, Mercari, Facebook Marketplace, eBay sold comps
+- Arbitrage, deal desk, resale, profit, flip, Mercari, Facebook Marketplace
+  with sold comps, eBay sold comps
   -> `skills/arbitrage-deal-desk/SKILL.md`
-- Freebie radar, free Facebook Marketplace, curb alert, free pickup, cheap
-  local listings -> `skills/freebie-radar/SKILL.md`
+- Athens marketplace, marketplace near me, good deals in my area, local
+  marketplace, freebie radar, free Facebook Marketplace, curb alert, free
+  pickup, cheap local listings -> `skills/freebie-radar/SKILL.md`
 - Browser/page automation -> `skills/page-map/SKILL.md`
 - SmartCore invoices, billing PDFs, billing email, quotes/proposals
   -> `skills/smartcore-billing/SKILL.md`

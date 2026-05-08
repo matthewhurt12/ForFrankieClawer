@@ -1,11 +1,17 @@
 # freebie-radar
 
-Use this skill when Matthew asks for Facebook Marketplace free listings, curb
-alerts, free pickup finds, very cheap local listings, or a daily local scan.
+Use this skill when Matthew asks for Facebook Marketplace free listings, Athens
+marketplace deals, marketplace near me, marketplace in my area, curb alerts,
+free pickup finds, very cheap local listings, good local deals, or a daily
+local scan.
 
 This is separate from `arbitrage-deal-desk`. The Deal Desk is for resale
 underwriting. Freebie Radar is for fast pickup opportunities and cheap local
 finds.
+
+Do not open browser Facebook Marketplace first. Use this local workflow first;
+fresh Facebook collection goes through the Apify actor only after Matthew
+approves paid collection.
 
 ## Safe Default Command
 

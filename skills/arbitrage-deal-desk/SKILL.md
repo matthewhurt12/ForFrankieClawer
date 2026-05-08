@@ -1,13 +1,18 @@
 # arbitrage-deal-desk
 
 Use this skill when Matthew asks about the retro tech arbitrage system, Apify
-marketplace scrapes, Mercari, Facebook Marketplace, eBay sold comps, deal
-recommendations, photo verification, or the Deal Desk.
+marketplace scrapes, Mercari, Facebook Marketplace with resale intent, eBay
+sold comps, deal recommendations, photo verification, flipping, profit, or the
+Deal Desk.
 
 ## Mission
 
 Help Matthew find resale/arbitrage leads for retro tech and vintage audio.
 Optimize for action quality, not lead count.
+
+If Matthew only asks for Athens/local/free/cheap marketplace finds without
+resale language, route to `freebie-radar` first. If he asks whether something is
+worth flipping, route here.
 
 Allowed verdicts:
 

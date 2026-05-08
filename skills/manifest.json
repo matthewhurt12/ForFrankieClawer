@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "updated": "2026-05-07",
+  "updated": "2026-05-08",
   "skills": [
+    {
+      "name": "intent-router",
+      "path": "skills/intent-router/SKILL.md",
+      "triggers": ["intent", "route", "what skill", "which tool", "marketplace near me", "good deals in my area", "athens marketplace", "local marketplace", "use your skills", "use your tools"],
+      "summary": "Classify Matthew's intent and route to the best existing skill/tool before inventing a new workflow.",
+      "safe_default": "python scripts\\intent_router.py \"Athens marketplace good deals in my area\""
+    },
     {
       "name": "athens-food",
       "path": "skills/athens-food/SKILL.md",

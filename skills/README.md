@@ -4,6 +4,8 @@ This folder contains reusable OpenClaw/Frankie skills for this mind.
 
 ## Available
 
+- `intent-router` - classify Matthew's request and route to the best existing
+  skill/tool before inventing a new workflow.
 - `athens-food` - recommend Athens restaurants from Matthew's spreadsheet by
   mood, cuisine, area, price, or random pick.
 - `voice-output` - navigate ElevenLabs / `sag` voice-file generation safely.

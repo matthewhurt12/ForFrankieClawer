@@ -5,6 +5,7 @@ Most docs here are historical design notes. For daily operation, start with:
 - `../START_HERE.md`
 - `../COMMANDS.md`
 - `../README.md`
+- `../skills/intent-router/SKILL.md`
 - `../reports/OPENCLAW_ARBITRAGE_RUNBOOK.md`
 - `APIFY_ACTOR_CATALOG.md`
 - `ATHENS_FOOD_SKILL.md`

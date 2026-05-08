@@ -13,10 +13,17 @@ python scripts\frankie_start.py
 
 When Matthew asks for a workflow, tool, slash command, or recurring capability:
 
-1. Check `COMMANDS.md`.
-2. Check `skills/manifest.json`.
-3. Open the matching `skills/<name>/SKILL.md`.
-4. Use the linked runbook or command.
+1. Run or mentally apply the intent router.
+2. Check `COMMANDS.md`.
+3. Check `skills/manifest.json`.
+4. Open the matching `skills/<name>/SKILL.md`.
+5. Use the linked runbook or command.
+
+Intent router command:
+
+```powershell
+python scripts\intent_router.py "Matthew's exact request"
+```
 
 Quick terminal helper:
 
@@ -53,6 +60,11 @@ Do not say a skill does not exist until you have checked those files.
 - `memory/YYYY-MM-DD.md` - daily working memory.
 
 ## Current Important Skills
+
+- `skills/intent-router/SKILL.md`
+  - First-pass intent recognition before creating a new strategy.
+  - Safe local command: `python scripts\intent_router.py "Athens marketplace good deals in my area"`
+  - Self-test: `python scripts\intent_router.py --self-test`
 
 - `skills/athens-food/SKILL.md`
   - Athens restaurant recommendations from Matthew's spreadsheet.
