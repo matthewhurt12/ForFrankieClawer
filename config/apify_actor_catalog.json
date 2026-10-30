@@ -88,10 +88,10 @@
     },
     {
       "name": "Google Shopping Scraper",
-      "actor_id": "solidcode/google-shopping-scraper",
+      "actor_id": "johnvc/google-shopping-api-google-shopping-products-prices-deals",
       "status": "optional_context",
       "use_for": "Retail/active price sanity checks, not resale proof.",
-      "notes": "Useful for knowing when an item is common/current retail inventory."
+      "notes": "Useful for knowing when an item is common/current retail inventory. Use q with max_pages 1; each dataset item is one results page, so read shopping_results[] title, extracted_price and source."
     }
   ]
 }

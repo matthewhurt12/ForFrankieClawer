@@ -55,7 +55,7 @@ Matthew's explicit approval.
   - Potential Athens/Atlanta local deal source.
   - Add only after the cost guard exists.
 
-- `solidcode/google-shopping-scraper`
+- `johnvc/google-shopping-api-google-shopping-products-prices-deals`
   - Active retail context only.
   - Helpful for sanity checking, not resale proof.
 
